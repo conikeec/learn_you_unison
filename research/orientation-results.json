@@ -1,0 +1,26 @@
+{
+  "verified_on": "2026-09-06",
+  "typescript": "Version 5.9.3",
+  "node": "v22.23.1",
+  "ucm": "unison version: release/1.4.0 (built on 2026-08-19)",
+  "passed": true,
+  "checks": [
+    "TypeScript build prints 12 in original and cloned Git repositories",
+    "Partial rename fails with missing export; repaired rename builds and propagates through Git",
+    "UCM load/update/run, stored rename, regenerated source, branch isolation, and merge pass",
+    "Fresh UCM processes print main=12, bonus=14, merge-check=14 from the saved codebase"
+  ],
+  "limits": "Git remote was a local bare repository; base fetched from Share; no Cloud deployment or remote compute executed.",
+  "cloud": {
+    "template_project": "@unison/cloud-start",
+    "branch": "main",
+    "installed_cloud_version": "27.2.0",
+    "verified_on": "2026-09-06",
+    "fixture": "examples/checks/cloud-map-reduce.md",
+    "fixture_sha256": "1e32686da27142025809c3a6d661cd5c827330530b718025322b7731f2d9bc25",
+    "local_handler_result": 222,
+    "remote_entrypoint_typechecked": true,
+    "remote_entrypoint_executed": false,
+    "physical_placement_tested": false
+  }
+}

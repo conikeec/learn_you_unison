@@ -436,5 +436,132 @@
       "unison",
       "unison-libraries"
     ]
+  },
+  {
+    "id": "typescript-modules",
+    "title": "TypeScript modules",
+    "url": "https://www.typescriptlang.org/docs/handbook/2/modules.html",
+    "accessed": "2026-09-06",
+    "status": "read; import failure and repair reproduced with TypeScript 5.9.3",
+    "used_by": [
+      "unison"
+    ]
+  },
+  {
+    "id": "git-push",
+    "title": "Git push reference",
+    "url": "https://git-scm.com/docs/git-push",
+    "accessed": "2026-09-06",
+    "status": "read; push, clone, and pull tested with a local bare remote",
+    "used_by": [
+      "unison"
+    ]
+  },
+  {
+    "id": "quickstart",
+    "title": "Unison quickstart",
+    "url": "https://www.unison-lang.org/docs/quickstart/",
+    "accessed": "2026-09-06",
+    "status": "read; project creation and local load/run workflow executed",
+    "used_by": [
+      "unison",
+      "unison-ucm"
+    ]
+  },
+  {
+    "id": "terms",
+    "title": "Unison terms and values",
+    "url": "https://www.unison-lang.org/docs/fundamentals/values-and-functions/terms/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison",
+      "unison-language"
+    ]
+  },
+  {
+    "id": "cloud-concepts",
+    "title": "Cloud core concepts",
+    "url": "https://www.unison.cloud/docs/core-concepts/",
+    "accessed": "2026-09-06",
+    "status": "read; selected signatures cross-checked against installed Cloud 27.2.0",
+    "used_by": [
+      "unison",
+      "unison-services"
+    ]
+  },
+  {
+    "id": "cloud-local",
+    "title": "Cloud local development",
+    "url": "https://www.unison.cloud/docs/local-development/",
+    "accessed": "2026-09-06",
+    "status": "read; local Cloud handler returned 222; no remote job submitted",
+    "used_by": [
+      "unison-services",
+      "unison-testing"
+    ]
+  },
+  {
+    "id": "distributed-datasets",
+    "title": "Distributed datasets overview",
+    "url": "https://www.unison-lang.org/articles/distributed-datasets/",
+    "accessed": "2026-09-06",
+    "status": "read; architectural explanation, not assumed to match all current APIs",
+    "used_by": [
+      "unison-services",
+      "unison-research"
+    ]
+  },
+  {
+    "id": "distributed-core",
+    "title": "Remote values and data placement",
+    "url": "https://www.unison-lang.org/articles/distributed-datasets/core-idea/",
+    "accessed": "2026-09-06",
+    "status": "read; distributed-data placement not executed",
+    "used_by": [
+      "unison-services"
+    ]
+  },
+  {
+    "id": "distributed-reduce",
+    "title": "Distributed and parallel reductions",
+    "url": "https://www.unison-lang.org/articles/distributed-datasets/reductions/",
+    "accessed": "2026-09-06",
+    "status": "read; original fork/await example run through local handler",
+    "used_by": [
+      "unison-services"
+    ]
+  },
+  {
+    "id": "distributed-memo",
+    "title": "Distributed memoization",
+    "url": "https://www.unison-lang.org/articles/distributed-datasets/incremental-evaluation/",
+    "accessed": "2026-09-06",
+    "status": "read; cache behavior not measured",
+    "used_by": [
+      "unison-services",
+      "unison-research"
+    ]
+  },
+  {
+    "id": "remote-visualization",
+    "title": "Visualizing remote computations",
+    "url": "https://www.unison-lang.org/blog/visualizing-remote/",
+    "accessed": "2026-09-06",
+    "status": "written article read; historical 2023-03-07; no video transcript retrieved",
+    "used_by": [
+      "unison-research"
+    ]
+  },
+  {
+    "id": "cloud-start",
+    "title": "Cloud starter project",
+    "url": "https://share.unison-lang.org/@unison/cloud-start",
+    "accessed": "2026-09-06",
+    "status": "main cloned on 2026-09-06; installed Cloud 27.2.0 signatures inspected; original local job returned 222",
+    "used_by": [
+      "unison-services",
+      "unison-testing"
+    ]
   }
 ]

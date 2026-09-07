@@ -5,7 +5,7 @@ description: Orient and route work on the Unison programming language, UCM codeb
 
 # Establish context before writing Unison
 
-For a first introduction, read [content-addressed code](../../docs/01-code-that-knows-its-own-name.md), then [working without source folders](../../docs/02-your-codebase-is-not-a-folder.md).
+For a first introduction, read [the Git-to-Unison walkthrough](../../docs/01-code-that-knows-its-own-name.md), then [code management and remote computation](../../docs/02-your-codebase-is-not-a-folder.md).
 Skip these guides when you already know the model and need a specific operation.
 
 Unison identifies stored definitions by content hash. Names are editable references to those definitions.

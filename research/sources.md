@@ -50,11 +50,25 @@ The local baseline is UCM release/1.4.0, built 2026-08-19.
 | organization | [Projects and codebase organization](https://www.unison-lang.org/docs/tooling/projects-codebase-organization/) | read | unison, unison-ucm |
 | recovery | [Resetting codebase state](https://www.unison-lang.org/docs/usage-topics/resetting-codebase-state/) | read; recovery commands not executed | unison-ucm |
 | share-hosting | [Hosting code on Unison Share](https://www.unison-lang.org/docs/tooling/unison-share/) | read; publishing workflow not executed | unison, unison-libraries |
+| typescript-modules | [TypeScript modules](https://www.typescriptlang.org/docs/handbook/2/modules.html) | read; import failure and repair reproduced with TypeScript 5.9.3 | unison |
+| git-push | [Git push reference](https://git-scm.com/docs/git-push) | read; push, clone, and pull tested with a local bare remote | unison |
+| quickstart | [Unison quickstart](https://www.unison-lang.org/docs/quickstart/) | read; project creation and local load/run workflow executed | unison, unison-ucm |
+| terms | [Unison terms and values](https://www.unison-lang.org/docs/fundamentals/values-and-functions/terms/) | read | unison, unison-language |
+| cloud-concepts | [Cloud core concepts](https://www.unison.cloud/docs/core-concepts/) | read; selected signatures cross-checked against installed Cloud 27.2.0 | unison, unison-services |
+| cloud-local | [Cloud local development](https://www.unison.cloud/docs/local-development/) | read; local Cloud handler returned 222; no remote job submitted | unison-services, unison-testing |
+| distributed-datasets | [Distributed datasets overview](https://www.unison-lang.org/articles/distributed-datasets/) | read; architectural explanation, not assumed to match all current APIs | unison-services, unison-research |
+| distributed-core | [Remote values and data placement](https://www.unison-lang.org/articles/distributed-datasets/core-idea/) | read; distributed-data placement not executed | unison-services |
+| distributed-reduce | [Distributed and parallel reductions](https://www.unison-lang.org/articles/distributed-datasets/reductions/) | read; original fork/await example run through local handler | unison-services |
+| distributed-memo | [Distributed memoization](https://www.unison-lang.org/articles/distributed-datasets/incremental-evaluation/) | read; cache behavior not measured | unison-services, unison-research |
+| remote-visualization | [Visualizing remote computations](https://www.unison-lang.org/blog/visualizing-remote/) | written article read; historical 2023-03-07; no video transcript retrieved | unison-research |
+| cloud-start | [Cloud starter project](https://share.unison-lang.org/@unison/cloud-start) | main cloned on 2026-09-06; installed Cloud 27.2.0 signatures inspected; original local job returned 222 | unison-services, unison-testing |
 
 ## Local evidence strengthens the documentation
 
 - [MCP contract](ucm-1.4.0-mcp.json): 29 tools returned by a disposable UCM process.
 - [Share observations](share-observations.json): retrieved release metadata and README fingerprints for four projects.
+- [Git-to-Unison comparison](orientation-results.json): TypeScript failure and repair, Git collaboration through a local remote, and UCM behavior after restarting.
+- [Cloud map/reduce](../examples/checks/cloud-map-reduce.md): a locally executed Cloud handler; remote deployment remains untested.
 - [Orientation example](../examples/content-addressing.md): equal definition references, rename, alias handling, and branch isolation executed locally.
 - [Executable examples](../examples/fundamentals.md): original code checked against the installed runtime.
 - [Talk notes](../skills/unison-research/references/talks.md): derived lessons and exact transcript access status.

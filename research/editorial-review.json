@@ -1,30 +1,31 @@
 {
-  "route": "Desk row 4: documentation; explanation guides, how-to entrypoints, reference support",
+  "route": "Desk row 4: documentation; worked explanation requested by the user, with executable checks",
   "date": "2026-09-06",
-  "conservation": "New orientation guides and transcript; README and entry skill retain their existing facts and gain links. Source and validation records add dated evidence.",
-  "skim_verdict": "pass: the guides move from definition identity to renames and changed dependencies, then from local organization to editing and collaboration",
+  "conservation": "Both orientation pages were rewritten from a familiar Git starting point; technical boundaries and the original scoring example are retained and expanded.",
+  "skim_verdict": "pass: begin with a working TypeScript program, expose a partial rename failure, repeat the operations in UCM, explain identity, then progress from branches to remote map/reduce and community",
   "geo": {
     "target_prompts": [
-      "How can a coding agent operate Unison effectively?",
-      "How can an agent verify Unison changes?",
-      "What makes Unison content-addressed code different from source files in Git?",
-      "How do I organize, edit, version, and share Unison code?"
+      "How does Unison differ from a TypeScript project managed with Git?",
+      "What is UCM and how do I load and run my first function?",
+      "Why does renaming a stored Unison function preserve callers?",
+      "How do Unison code sharing and remote map/reduce differ?"
     ],
     "extraction": [
-      "Task-specific skills",
-      "Executable UCM verification",
-      "Distinct Olki design mapping"
+      "UCM manages a persistent codebase and exposes a local runtime.",
+      "Stored callers reference definition identities independently of public names.",
+      "Share hosts code; a configured runtime and ability handler execute remote jobs."
     ],
-    "renderability": "Plain Markdown text, tables, and code; seven Mermaid diagrams require a compatible renderer such as GitHub. Prose explains the same relationships.",
-    "recommendation": "Not measured; single-model smoke assessment only"
+    "renderability": "Plain Markdown carries the explanation and commands; eight Mermaid diagrams require a compatible renderer. All eight parsed successfully.",
+    "recommendation": "Not measured; single-model smoke assessment only",
+    "tracking": "Win means correct extraction of the four target answers. The revision adds a Git baseline, exact load/run steps, checked map/reduce code, and community context; no comprehension or recommendation measurement was performed."
   },
   "files": {
     "README.md": {
       "stats": {
-        "sentences": 26,
-        "avg_len": 13.0,
-        "pct_over_cap": 11.5,
-        "emdash_per_para": 0.18,
+        "sentences": 30,
+        "avg_len": 13.4,
+        "pct_over_cap": 13.3,
+        "emdash_per_para": 0.15,
         "intensifiers": 0,
         "cap": 20,
         "format": "docs"
@@ -34,73 +35,85 @@
         {
           "rule": "S-04",
           "line": 3,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "This skill set helps coding agents inspect, write, test, and maintain Unison programs."
         },
         {
           "rule": "S-01",
           "line": 6,
-          "waiver": "Law 1: retain the complete technical condition or enumerated evidence; parser also joins adjacent list items.",
+          "waiver": "Law 1: preserve the complete condition, command explanation, or technical distinction; the heuristic also joins list items.",
           "text": "For example: “Read CODE, inspect my UCM project, and implement a tested pure function.” Th"
         },
         {
           "rule": "S-04",
           "line": 6,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "For example: “Read CODE, inspect my UCM project, and implement a tested pure function.” Th"
+        },
+        {
+          "rule": "S-01",
+          "line": 11,
+          "waiver": "Law 1: preserve the complete condition, command explanation, or technical distinction; the heuristic also joins list items.",
+          "text": "From Git files to Unison functions — build a TypeScript game, break an import, then load, "
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Both guides follow one scoring example with diagrams, commands, and expected results."
         },
         {
           "rule": "S-04",
           "line": 18,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "The canonical skills live under CODE."
         },
         {
           "rule": "S-04",
           "line": 18,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "Each directory contains standard CODE frontmatter and task instructions."
         },
         {
           "rule": "S-01",
           "line": 22,
-          "waiver": "Law 1: retain the complete technical condition or enumerated evidence; parser also joins adjacent list items.",
+          "waiver": "Law 1: preserve the complete condition, command explanation, or technical distinction; the heuristic also joins list items.",
           "text": "For a different harness, add this instruction to its project rules: “For Unison tasks, rea"
         },
         {
           "rule": "S-04",
           "line": 22,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "For a different harness, add this instruction to its project rules: “For Unison tasks, rea"
         },
         {
           "rule": "S-04",
-          "line": 50,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "line": 60,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "It lists tools without calling definition-changing tools."
         },
         {
           "rule": "S-04",
-          "line": 58,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "line": 68,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "Local test baseline: UCM release/1.4.0, built 2026-08-19."
         },
         {
           "rule": "S-05",
-          "line": 58,
-          "waiver": "Law 1: the artifact or value is the subject; no actor is concealed.",
+          "line": 68,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
           "text": "was installed"
         },
         {
           "rule": "S-01",
-          "line": 61,
-          "waiver": "Law 1: retain the complete technical condition or enumerated evidence; parser also joins adjacent list items.",
+          "line": 71,
+          "waiver": "Law 1: preserve the complete condition, command explanation, or technical distinction; the heuristic also joins list items.",
           "text": "- Source catalog: primary documentation, Share, upstream agent guidance, talks, and access"
         },
         {
           "rule": "S-04",
-          "line": 61,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "line": 71,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "- Source catalog: primary documentation, Share, upstream agent guidance, talks, and access"
         }
       ],
@@ -123,7 +136,7 @@
         },
         {
           "at": "L14",
-          "text": "Both guides use diagrams and the same executable example."
+          "text": "Both guides follow one scoring example with diagrams, commands, and expected results."
         },
         {
           "at": "L18",
@@ -139,23 +152,31 @@
         },
         {
           "at": "L50",
+          "text": "For the Git-to-Unison walkthrough, install its TypeScript compiler locally and run the comparison check:"
+        },
+        {
+          "at": "L57",
+          "text": "This checks the broken/repaired TypeScript build, a local Git remote, and fresh-process UCM behavior."
+        },
+        {
+          "at": "L60",
           "text": "To inspect your installed MCP contract, run this probe."
         },
         {
-          "at": "L58",
+          "at": "L68",
           "text": "Research date: 2026-09-06."
         },
         {
-          "at": "L61",
+          "at": "L71",
           "text": "- Source catalog: primary documentation, Share, upstream agent guidance, talks, and access limitations. - Validation report: checks executed and their limits. - Evaluation tasks: realistic prompts and observable success criteria for another harness. - Olki mapping: requirements from the neighboring CODE directory."
         },
         {
-          "at": "L66",
+          "at": "L76",
           "text": "The Olki documents were found at CODE; the requested underscore path did not exist."
         }
       ],
       "headings": [
-        "New to Unison? Start with the surprise",
+        "New to Unison? Start with Git",
         "Load the skills where your harness can find them",
         "Choose the skill that matches the task",
         "Verify the examples on your machine",
@@ -1010,7 +1031,7 @@
     "skills/unison/SKILL.md": {
       "stats": {
         "sentences": 26,
-        "avg_len": 9.8,
+        "avg_len": 9.9,
         "pct_over_cap": 0.0,
         "emdash_per_para": 0.0,
         "intensifiers": 0,
@@ -1020,63 +1041,57 @@
       "fails": [],
       "warnings": [
         {
-          "rule": "S-04",
-          "line": 8,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "For a first introduction, read content-addressed code, then working without source folders"
-        },
-        {
           "rule": "T-02",
           "line": 11,
-          "waiver": "Law 2: retain a single short block with its necessary qualifications; the parser also splits identifiers or joins list steps.",
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
           "text": "paragraph has 5 sentences (max 4)"
         },
         {
           "rule": "S-04",
           "line": 11,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "The UCM codebase holds definitions, names, and history; scratch files provide an editing s"
         },
         {
           "rule": "T-02",
           "line": 18,
-          "waiver": "Law 2: retain a single short block with its necessary qualifications; the parser also splits identifiers or joins list steps.",
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
           "text": "paragraph has 11 sentences (max 4)"
         },
         {
           "rule": "S-04",
           "line": 18,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "Record CODE, the codebase path, project/branch, scratch directory, and installed dependenc"
         },
         {
           "rule": "S-04",
           "line": 18,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "If a UCM MCP connection exists, inspect its tools and obtain current project context."
         },
         {
           "rule": "S-04",
           "line": 18,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "Inspect relevant type signatures, implement a small slice, and typecheck it."
         },
         {
           "rule": "T-02",
           "line": 38,
-          "waiver": "Law 2: retain a single short block with its necessary qualifications; the parser also splits identifiers or joins list steps.",
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
           "text": "paragraph has 5 sentences (max 4)"
         },
         {
           "rule": "S-04",
           "line": 38,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "Avoid dumping an entire base library into context."
         },
         {
           "rule": "S-04",
           "line": 38,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "After two unsuccessful repairs using the same assumption, inspect the actual definition, s"
         }
       ],
@@ -1087,7 +1102,7 @@
         },
         {
           "at": "L8",
-          "text": "For a first introduction, read content-addressed code, then working without source folders."
+          "text": "For a first introduction, read the Git-to-Unison walkthrough, then code management and remote computation."
         },
         {
           "at": "L11",
@@ -2367,7 +2382,7 @@
     "research/sources.md": {
       "stats": {
         "sentences": 19,
-        "avg_len": 13.1,
+        "avg_len": 14.7,
         "pct_over_cap": 5.3,
         "emdash_per_para": 0.0,
         "intensifiers": 0,
@@ -2379,49 +2394,49 @@
         {
           "rule": "S-04",
           "line": 3,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "The catalog records inspected sources, access limits, and the skills they support."
         },
         {
           "rule": "S-01",
-          "line": 56,
-          "waiver": "Law 1: retain the complete technical condition or enumerated evidence; parser also joins adjacent list items.",
+          "line": 68,
+          "waiver": "Law 1: preserve the complete condition, command explanation, or technical distinction; the heuristic also joins list items.",
           "text": "- MCP contract: 29 tools returned by a disposable UCM process. - Share observations: retri"
         },
         {
           "rule": "S-04",
-          "line": 56,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "line": 68,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "- MCP contract: 29 tools returned by a disposable UCM process. - Share observations: retri"
         },
         {
           "rule": "S-04",
-          "line": 62,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "line": 76,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "No Cloud deployment, external service mutation, or library compatibility matrix was tested"
         },
         {
           "rule": "S-05",
-          "line": 62,
-          "waiver": "Law 1: the artifact or value is the subject; no actor is concealed.",
+          "line": 76,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
           "text": "was tested"
         },
         {
           "rule": "T-02",
-          "line": 67,
-          "waiver": "Law 2: retain a single short block with its necessary qualifications; the parser also splits identifiers or joins list steps.",
+          "line": 81,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
           "text": "paragraph has 5 sentences (max 4)"
         },
         {
           "rule": "S-04",
-          "line": 74,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "line": 88,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "A roadmap is evidence of intent; local schemas, release notes, and executed examples estab"
         },
         {
           "rule": "S-04",
-          "line": 78,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "line": 92,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "Upstream agent instructions informed signature inspection and incremental typechecking."
         }
       ],
@@ -2435,23 +2450,23 @@
           "text": "Research date: 2026-09-06."
         },
         {
-          "at": "L56",
-          "text": "- MCP contract: 29 tools returned by a disposable UCM process. - Share observations: retrieved release metadata and README fingerprints for four projects. - Orientation example: equal definition references, rename, alias handling, and branch isolation executed locally. - Executable examples: original code checked against the installed runtime. - Talk notes: derived lessons and exact transcript access status."
+          "at": "L68",
+          "text": "- MCP contract: 29 tools returned by a disposable UCM process. - Share observations: retrieved release metadata and README fingerprints for four projects. - Git-to-Unison comparison: TypeScript failure and repair, Git collaboration through a local remote, and UCM behavior after restarting. - Cloud map/reduce: a locally executed Cloud handler; remote deployment remains untested. - Orientation example: equal definition references, rename, alias handling, and branch isolation executed locally. - Executable examples: original code checked against the installed runtime. - Talk notes: derived lessons and exact transcript access status."
         },
         {
-          "at": "L62",
+          "at": "L76",
           "text": "The Share README tool does not pin a release."
         },
         {
-          "at": "L67",
+          "at": "L81",
           "text": "The requested CODE path was absent."
         },
         {
-          "at": "L74",
+          "at": "L88",
           "text": "Retain concise paraphrases and source links."
         },
         {
-          "at": "L78",
+          "at": "L92",
           "text": "Upstream agent instructions informed signature inspection and incremental typechecking."
         }
       ],
@@ -2464,9 +2479,9 @@
     },
     "research/validation.md": {
       "stats": {
-        "sentences": 46,
-        "avg_len": 11.0,
-        "pct_over_cap": 4.3,
+        "sentences": 60,
+        "avg_len": 11.2,
+        "pct_over_cap": 1.7,
         "emdash_per_para": 0.0,
         "intensifiers": 0,
         "cap": 20,
@@ -2477,193 +2492,235 @@
         {
           "rule": "S-04",
           "line": 16,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "The process logs and output transcripts remain under ignored CODE paths."
         },
         {
           "rule": "S-04",
           "line": 20,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "The first drafts exposed incorrect builtin qualification and a missing CODE in the inline "
         },
         {
           "rule": "S-04",
           "line": 20,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "The corrected examples passed after UCM diagnostics identified the errors."
         },
         {
           "rule": "S-01",
           "line": 23,
-          "waiver": "Law 1: retain the complete technical condition or enumerated evidence; parser also joins adjacent list items.",
+          "waiver": "Law 1: preserve the complete condition, command explanation, or technical distinction; the heuristic also joins list items.",
           "text": "The orientation example also exposed two UCM details: CODE needs a stored definition, and "
         },
         {
           "rule": "S-04",
           "line": 23,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "The orientation example also exposed two UCM details: CODE needs a stored definition, and "
         },
         {
           "rule": "S-04",
           "line": 23,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "The final transcript saves definitions before comparing references and removes its extra t"
         },
         {
-          "rule": "S-04",
+          "rule": "S-05",
           "line": 28,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "This avoids initial codebase-creation messages sharing stdout with the MCP JSON response o"
-        },
-        {
-          "rule": "S-04",
-          "line": 33,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Optional Share lookups retrieved metadata and READMEs for base, HTTP, JSON, and Cloud with"
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "be installed"
         },
         {
           "rule": "S-05",
-          "line": 33,
-          "waiver": "Law 1: the artifact or value is the subject; no actor is concealed.",
-          "text": "were called"
-        },
-        {
-          "rule": "S-04",
-          "line": 39,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "CODE checks skill names, descriptions, relative links, source records, and repository disc"
-        },
-        {
-          "rule": "S-04",
-          "line": 39,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "The skill-creator validator checks all nine skill entrypoints independently of that script"
-        },
-        {
-          "rule": "S-04",
-          "line": 43,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "All seven orientation diagrams passed the Mermaid 11 parser."
-        },
-        {
-          "rule": "S-05",
-          "line": 43,
-          "waiver": "Law 1: the artifact or value is the subject; no actor is concealed.",
-          "text": "been visually checked"
-        },
-        {
-          "rule": "S-04",
-          "line": 47,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "The Strange Loop recording fetch failed, and individual Forall talk transcripts were not r"
-        },
-        {
-          "rule": "S-05",
-          "line": 47,
-          "waiver": "Law 1: the artifact or value is the subject; no actor is concealed.",
-          "text": "was retrieved"
-        },
-        {
-          "rule": "S-04",
-          "line": 51,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "No Cloud deployment, HTTP integration execution, FFI call, dependency upgrade, or unique-t"
-        },
-        {
-          "rule": "S-04",
-          "line": 51,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "The Olki mapping reflects design documents and identifies implementation responsibilities;"
-        },
-        {
-          "rule": "S-04",
-          "line": 51,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Multi-harness behavioral evaluation remains unrun."
-        },
-        {
-          "rule": "S-04",
-          "line": 51,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Fourteen scenarios define observable criteria for that work."
-        },
-        {
-          "rule": "S-05",
-          "line": 51,
-          "waiver": "Law 1: the artifact or value is the subject; no actor is concealed.",
-          "text": "was executed"
+          "line": 42,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "was published"
         },
         {
           "rule": "T-02",
-          "line": 57,
-          "waiver": "Law 2: retain a single short block with its necessary qualifications; the parser also splits identifiers or joins list steps.",
-          "text": "paragraph has 5 sentences (max 4)"
-        },
-        {
-          "rule": "S-04",
-          "line": 57,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "The two orientation guides use explanation form for readers familiar with Git."
-        },
-        {
-          "rule": "S-04",
-          "line": 57,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Skill workflows use how-to form; detailed mechanics and source records use reference form."
-        },
-        {
-          "rule": "S-04",
-          "line": 57,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "The bundle uses its own Unison/Olki scope; Modiqo/Rote marketing claims do not apply."
-        },
-        {
-          "rule": "T-02",
-          "line": 62,
-          "waiver": "Law 2: retain a single short block with its necessary qualifications; the parser also splits identifiers or joins list steps.",
+          "line": 46,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
           "text": "paragraph has 6 sentences (max 4)"
         },
         {
           "rule": "S-04",
-          "line": 62,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "line": 46,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The example starts three tasks before awaiting their results; task count does not establis"
+        },
+        {
+          "rule": "S-04",
+          "line": 46,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Remote transport, placement, credentials, deployment, and failure handling remain untested"
+        },
+        {
+          "rule": "S-04",
+          "line": 54,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "This avoids initial codebase-creation messages sharing stdout with the MCP JSON response o"
+        },
+        {
+          "rule": "S-04",
+          "line": 59,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Optional Share lookups retrieved metadata and READMEs for base, HTTP, JSON, and Cloud with"
+        },
+        {
+          "rule": "S-05",
+          "line": 59,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "were called"
+        },
+        {
+          "rule": "S-04",
+          "line": 65,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "CODE checks skill names, descriptions, relative links, source records, and repository disc"
+        },
+        {
+          "rule": "S-04",
+          "line": 65,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The skill-creator validator checks all nine skill entrypoints independently of that script"
+        },
+        {
+          "rule": "S-04",
+          "line": 69,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "All eight orientation diagrams passed the Mermaid 11 parser."
+        },
+        {
+          "rule": "S-05",
+          "line": 69,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "been visually checked"
+        },
+        {
+          "rule": "S-04",
+          "line": 73,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The Strange Loop recording fetch failed, and individual Forall talk transcripts were not r"
+        },
+        {
+          "rule": "S-05",
+          "line": 73,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "was retrieved"
+        },
+        {
+          "rule": "S-04",
+          "line": 77,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "No Cloud deployment, HTTP integration execution, FFI call, dependency upgrade, or unique-t"
+        },
+        {
+          "rule": "S-04",
+          "line": 77,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The Olki mapping reflects design documents and identifies implementation responsibilities;"
+        },
+        {
+          "rule": "S-04",
+          "line": 77,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Multi-harness behavioral evaluation remains unrun."
+        },
+        {
+          "rule": "S-04",
+          "line": 77,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Fourteen scenarios define observable criteria for that work."
+        },
+        {
+          "rule": "S-05",
+          "line": 77,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "was executed"
+        },
+        {
+          "rule": "T-02",
+          "line": 83,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 6 sentences (max 4)"
+        },
+        {
+          "rule": "S-04",
+          "line": 83,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The two orientation guides use worked explanations for readers familiar with TypeScript an"
+        },
+        {
+          "rule": "S-04",
+          "line": 83,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The user explicitly requested commands alongside explanation; that request takes precedenc"
+        },
+        {
+          "rule": "S-04",
+          "line": 83,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Skill workflows use how-to form; detailed mechanics and source records use reference form."
+        },
+        {
+          "rule": "S-04",
+          "line": 83,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The bundle uses its own Unison/Olki scope; Modiqo/Rote marketing claims do not apply."
+        },
+        {
+          "rule": "T-02",
+          "line": 89,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 7 sentences (max 4)"
+        },
+        {
+          "rule": "S-04",
+          "line": 89,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "The deterministic lint output, warning dispositions, and skim extracts are recorded in the"
         },
         {
           "rule": "S-04",
-          "line": 62,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "line": 89,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "The entrypoints state the next operation and verification evidence before conditional deta"
         },
         {
-          "rule": "S-01",
-          "line": 62,
-          "waiver": "Law 1: retain the complete technical condition or enumerated evidence; parser also joins adjacent list items.",
-          "text": "Conservation: the orientation guides and their transcript are new; existing README and ski"
+          "rule": "S-04",
+          "line": 89,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Conservation: the rewritten guides retain definition identity, alias behavior, unique-type"
+        },
+        {
+          "rule": "S-04",
+          "line": 89,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "They expand the original game into a TypeScript comparison and local/remote computation ex"
         },
         {
           "rule": "S-05",
-          "line": 62,
-          "waiver": "Law 1: the artifact or value is the subject; no actor is concealed.",
+          "line": 89,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
           "text": "are recorded"
         },
         {
           "rule": "T-02",
-          "line": 67,
-          "waiver": "Law 2: retain a single short block with its necessary qualifications; the parser also splits identifiers or joins list steps.",
+          "line": 95,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
           "text": "paragraph has 5 sentences (max 4)"
         },
         {
           "rule": "S-04",
-          "line": 67,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "line": 95,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "GEO extraction: the bundle supplies task-specific Unison guidance, executable verification"
         },
         {
           "rule": "S-04",
-          "line": 67,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
+          "line": 95,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
           "text": "Plain Markdown makes them available without JavaScript rendering."
         }
       ],
@@ -2690,43 +2747,56 @@
         },
         {
           "at": "L28",
+          "text": "CODE executes the TypeScript blocks extracted from the first guide."
+        },
+        {
+          "at": "L42",
+          "text": "See machine-readable comparison results."
+        },
+        {
+          "at": "L46",
+          "text": "The Cloud check cloned CODE and inspected installed signatures."
+        },
+        {
+          "at": "L54",
           "text": "CODE initialized an isolated UCM MCP process and retrieved 29 tool schemas."
         },
         {
-          "at": "L33",
+          "at": "L59",
           "text": "Optional Share lookups retrieved metadata and READMEs for base, HTTP, JSON, and Cloud without installing those libraries."
         },
         {
-          "at": "L39",
+          "at": "L65",
           "text": "CODE checks skill names, descriptions, relative links, source records, and repository discovery symlinks."
         },
         {
-          "at": "L43",
-          "text": "All seven orientation diagrams passed the Mermaid 11 parser."
+          "at": "L69",
+          "text": "All eight orientation diagrams passed the Mermaid 11 parser."
         },
         {
-          "at": "L47",
+          "at": "L73",
           "text": "The DevTools.fm publisher transcript was retrieved and read."
         },
         {
-          "at": "L51",
+          "at": "L77",
           "text": "No Cloud deployment, HTTP integration execution, FFI call, dependency upgrade, or unique-type migration was executed."
         },
         {
-          "at": "L57",
+          "at": "L83",
           "text": "Desk route: row 4, documentation."
         },
         {
-          "at": "L62",
+          "at": "L89",
           "text": "The deterministic lint output, warning dispositions, and skim extracts are recorded in the editorial review."
         },
         {
-          "at": "L67",
+          "at": "L95",
           "text": "GEO extraction: the bundle supplies task-specific Unison guidance, executable verification, and a distinct Olki design mapping."
         }
       ],
       "headings": [
         "Executable examples pass in disposable codebases",
+        "The expanded walkthrough starts with a real TypeScript failure",
         "The MCP contract was discovered from a running server",
         "Structural checks cover packaging and references",
         "Research has explicit limits",
@@ -2891,10 +2961,10 @@
     },
     "docs/01-code-that-knows-its-own-name.md": {
       "stats": {
-        "sentences": 81,
-        "avg_len": 9.5,
+        "sentences": 162,
+        "avg_len": 9.8,
         "pct_over_cap": 0.0,
-        "emdash_per_para": 0.0,
+        "emdash_per_para": 0.02,
         "intensifiers": 0,
         "cap": 20,
         "format": "docs"
@@ -2902,260 +2972,537 @@
       "fails": [],
       "warnings": [
         {
-          "rule": "T-02",
+          "rule": "S-04",
           "line": 3,
-          "waiver": "Law 2: retain a single short block with its necessary qualifications; the parser also splits identifiers or joins list steps.",
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "You rename one exported function, miss an import, and the build fails."
+        },
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Unison changes the relationship that made that failure possible: stored callers refer to d"
+        },
+        {
+          "rule": "S-04",
+          "line": 6,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "We will build the same tiny game twice, run it, and rename its reward function."
+        },
+        {
+          "rule": "S-04",
+          "line": 11,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Our game gives a player one extra star, twice."
+        },
+        {
+          "rule": "S-05",
+          "line": 73,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "are required"
+        },
+        {
+          "rule": "T-02",
+          "line": 81,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
           "text": "paragraph has 5 sentences (max 4)"
         },
         {
           "rule": "S-04",
-          "line": 14,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Function calls use spaces: CODE calls CODE with CODE."
+          "line": 81,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Git stores content-addressed objects already: blobs for file contents, trees for directory"
         },
         {
-          "rule": "S-04",
-          "line": 27,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "When the Unison Codebase Manager (UCM) stores these definitions, the caller refers to a pa"
-        },
-        {
-          "rule": "S-04",
-          "line": 69,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "The difference is what needs changing: source references there, the naming layer here."
-        },
-        {
-          "rule": "S-04",
-          "line": 78,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Argument names become positional references."
-        },
-        {
-          "rule": "S-04",
-          "line": 78,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "The function's public name lives separately."
-        },
-        {
-          "rule": "S-04",
-          "line": 92,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "The official explanation describes hashing syntax trees and resolving references."
+          "rule": "T-02",
+          "line": 102,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 6 sentences (max 4)"
         },
         {
           "rule": "S-04",
           "line": 102,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "We test their identities, not merely whether both return CODE for one input."
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "A Git push only triggers computation if you have configured something, such as CI, to reac"
+        },
+        {
+          "rule": "S-05",
+          "line": 102,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "is distributed"
         },
         {
           "rule": "S-04",
-          "line": 107,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "That does not mean Unison proves all equivalent algorithms identical."
+          "line": 106,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The two paths serve different purposes:"
+        },
+        {
+          "rule": "T-02",
+          "line": 148,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 5 sentences (max 4)"
         },
         {
           "rule": "S-04",
-          "line": 107,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Also, deliberately distinct unique types carry identity beyond their visible shape."
+          "line": 183,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Both files changed, even though the reward stayed the same."
         },
         {
           "rule": "S-04",
-          "line": 107,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "See type identity before applying the function example to every declaration."
+          "line": 183,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Moving CODE into another directory would likewise require repairing the relative import pa"
+        },
+        {
+          "rule": "T-02",
+          "line": 189,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 5 sentences (max 4)"
         },
         {
           "rule": "S-04",
-          "line": 145,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "One detail matters in the runnable example: we remove the extra CODE alias before changing"
+          "line": 189,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "UCM means Unison Codebase Manager."
         },
         {
           "rule": "S-04",
-          "line": 164,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "The distinction here is that Unison understands definition identity inside the language."
+          "line": 189,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "It manages the database holding your Unison code, checks new definitions, and provides com"
         },
         {
           "rule": "S-04",
-          "line": 169,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "A live HTTP check cannot make the same promise: the world may have changed."
+          "line": 201,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Unison also supports packaged programs run through CODE; an interactive UCM process is not"
+        },
+        {
+          "rule": "T-02",
+          "line": 205,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 5 sentences (max 4)"
         },
         {
           "rule": "S-04",
-          "line": 173,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Different types still require compatible interfaces or an explicit conversion."
+          "line": 205,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "It has functions, values, data types, records, and abilities for effects."
         },
         {
           "rule": "S-04",
-          "line": 177,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Unison Cloud builds typed services on this foundation."
+          "line": 205,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "You compose functions over data rather than needing a class to own each operation."
+        },
+        {
+          "rule": "S-05",
+          "line": 221,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "is loaded"
         },
         {
           "rule": "S-04",
-          "line": 177,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Networking, authorization, and operational failures still need handling."
+          "line": 231,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "This setup step needs network access."
+        },
+        {
+          "rule": "S-04",
+          "line": 234,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The name CODE means project / branch, not a directory path."
+        },
+        {
+          "rule": "S-04",
+          "line": 239,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "In your editor, create CODE inside CODE with this code:"
+        },
+        {
+          "rule": "S-04",
+          "line": 251,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "CODE means “take a CODE, return a CODE.” Function application uses spaces: CODE."
+        },
+        {
+          "rule": "S-04",
+          "line": 290,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "CODE allows effects such as printing; CODE allows failure; CODE is the empty result after "
+        },
+        {
+          "rule": "S-04",
+          "line": 290,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "CODE turns CODE into printable text."
+        },
+        {
+          "rule": "S-04",
+          "line": 345,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "A UCM rename does not rewrite arbitrary text files, URLs, or external clients."
+        },
+        {
+          "rule": "S-04",
+          "line": 353,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "UCM prepends those definitions to its most recently loaded file, using their current names"
+        },
+        {
+          "rule": "S-05",
+          "line": 358,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "is derived"
+        },
+        {
+          "rule": "T-02",
+          "line": 361,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 5 sentences (max 4)"
+        },
+        {
+          "rule": "S-04",
+          "line": 361,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The public name lives separately; argument names become positional references."
+        },
+        {
+          "rule": "S-04",
+          "line": 382,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Only the dotted name arrow moves during our rename:"
+        },
+        {
+          "rule": "S-04",
+          "line": 394,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The solid dependency arrow never moves."
+        },
+        {
+          "rule": "S-04",
+          "line": 394,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "When UCM displays B, it looks up today's readable name for A."
+        },
+        {
+          "rule": "S-05",
+          "line": 394,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "is removed"
+        },
+        {
+          "rule": "T-02",
+          "line": 397,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 5 sentences (max 4)"
+        },
+        {
+          "rule": "S-04",
+          "line": 397,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Unique types also deliberately distinguish some declarations with identical visible shapes"
+        },
+        {
+          "rule": "S-04",
+          "line": 402,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Unison makes definition identity part of how the language refers to code."
+        },
+        {
+          "rule": "S-04",
+          "line": 405,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "A stable identity lets another runtime request the exact definition it needs."
+        },
+        {
+          "rule": "S-04",
+          "line": 410,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The walkthrough checks reproduce the TypeScript failure/repair and Unison load/run/rename "
         }
       ],
       "skim_extract": [
         {
           "at": "TITLE",
-          "text": "Your function can survive a name change"
+          "text": "From Git files to Unison functions: make a rename disappear"
         },
         {
           "at": "L3",
-          "text": "Imagine renaming a function without rewriting a single caller."
+          "text": "You have a working TypeScript program."
         },
         {
-          "at": "L7",
-          "text": "The trick: a function's name is a label."
+          "at": "L6",
+          "text": "Let's earn that claim."
         },
         {
-          "at": "L9",
-          "text": "This is the first of two guides for programmers arriving from files and Git."
+          "at": "L11",
+          "text": "Our game gives a player one extra star, twice."
         },
         {
-          "at": "L14",
-          "text": "Here is a small Unison program."
+          "at": "L23",
+          "text": "Create CODE containing CODE and CODE, each on its own line."
         },
         {
-          "at": "L25",
-          "text": "CODE produces CODE."
-        },
-        {
-          "at": "L27",
-          "text": "When the Unison Codebase Manager (UCM) stores these definitions, the caller refers to a particular definition of CODE."
-        },
-        {
-          "at": "L30",
-          "text": "The names point to definitions; the definitions point to their dependencies."
+          "at": "L36",
+          "text": "In CODE, define the smallest useful reward:"
         },
         {
           "at": "L44",
-          "text": "Dotted arrows are names."
+          "text": "In CODE, import that function by its exported name and module path:"
         },
         {
-          "at": "L49",
-          "text": "Suppose CODE is a better name."
+          "at": "L54",
+          "text": "In CODE, print the result:"
         },
         {
-          "at": "L52",
-          "text": "The graph of definitions stays exactly where it was."
-        },
-        {
-          "at": "L65",
-          "text": "CODE still refers to A."
+          "at": "L62",
+          "text": "Compile the files to JavaScript, then ask Node to run the entry point:"
         },
         {
           "at": "L69",
-          "text": "An IDE can also perform a good rename in a conventional language."
+          "text": "The program prints CODE."
         },
         {
-          "at": "L75",
-          "text": "An abstract syntax tree, or AST, represents a parsed expression's structure."
+          "at": "L73",
+          "text": "Save the working version in Git."
         },
         {
-          "at": "L78",
-          "text": "Unison hashes a representation of that structure with resolved dependency references."
+          "at": "L81",
+          "text": "You now have a commit recording the file tree."
         },
         {
-          "at": "L82",
-          "text": "Conceptually, our little function becomes:"
+          "at": "L85",
+          "text": "To share this exercise, first create an empty remote repository you own."
         },
         {
           "at": "L92",
-          "text": "That is a teaching sketch, not Unison's serialized format."
-        },
-        {
-          "at": "L95",
-          "text": "Now write the same definition with different labels:"
+          "text": "The remote now has the committed files and their history."
         },
         {
           "at": "L102",
-          "text": "In our executable example, CODE and CODE have equal definition references."
+          "text": "Their machine prints CODE too."
         },
         {
-          "at": "L105",
-          "text": "Two names."
-        },
-        {
-          "at": "L107",
-          "text": "That does not mean Unison proves all equivalent algorithms identical."
-        },
-        {
-          "at": "L114",
-          "text": "Tomorrow is double-star day."
-        },
-        {
-          "at": "L116",
-          "text": "That produces a new definition, C."
+          "at": "L106",
+          "text": "The two paths serve different purposes:"
         },
         {
           "at": "L119",
-          "text": "The old and new programs can coexist:"
+          "text": "Back in the original project, make a branch for the rename:"
         },
         {
-          "at": "L137",
-          "text": "The contents at A do not turn into C."
+          "at": "L125",
+          "text": "This creates and selects CODE."
         },
         {
-          "at": "L141",
-          "text": "For a compatible change like this, UCM can propagate the update."
+          "at": "L133",
+          "text": "The behavior looks identical."
+        },
+        {
+          "at": "L139",
+          "text": "The build fails with a diagnostic like:"
         },
         {
           "at": "L145",
-          "text": "One detail matters in the runnable example: we remove the extra CODE alias before changing CODE."
+          "text": "The import still asks for a name that the module no longer exports."
         },
         {
-          "at": "L151",
-          "text": "Git already has a content-addressed object database."
+          "at": "L148",
+          "text": "A good IDE rename can update the import and calls together."
         },
         {
-          "at": "L164",
-          "text": "Moving an unchanged file in Git can preserve its blob hash."
+          "at": "L152",
+          "text": "The dependency chain now contains an unresolved name:"
         },
         {
-          "at": "L169",
-          "text": "A pure test tied to unchanged definitions can reuse its recorded result."
+          "at": "L162",
+          "text": "Repair CODE by changing its import and both calls:"
         },
         {
-          "at": "L173",
-          "text": "Two libraries can depend on different versions of a definition without competing for a single global name."
+          "at": "L172",
+          "text": "Repeat the compile and CODE commands: the result is CODE again."
         },
         {
-          "at": "L177",
-          "text": "Distributed runtimes can use definition identity to identify and transfer missing code dependencies."
+          "at": "L183",
+          "text": "Both files changed, even though the reward stayed the same."
         },
         {
-          "at": "L181",
-          "text": "The surprising part is how much follows from a small change in identity."
+          "at": "L189",
+          "text": "UCM means Unison Codebase Manager."
         },
         {
-          "at": "L184",
-          "text": "Next: where the code lives, how you edit it, and how a team shares it."
+          "at": "L193",
+          "text": "Keep these three things separate:"
+        },
+        {
+          "at": "L201",
+          "text": "UCM includes access to the runtime, but managing a codebase and executing a program are different jobs."
+        },
+        {
+          "at": "L205",
+          "text": "Unison still has code."
+        },
+        {
+          "at": "L212",
+          "text": "Install UCM using the official quickstart, then open a fresh shell outside the TypeScript project."
+        },
+        {
+          "at": "L221",
+          "text": "UCM opens an interactive prompt."
+        },
+        {
+          "at": "L225",
+          "text": "At the UCM prompt, enter the command after CODE; do not type the prompt itself:"
+        },
+        {
+          "at": "L231",
+          "text": "UCM creates a project with a CODE branch, downloads the base library, and selects CODE."
+        },
+        {
+          "at": "L234",
+          "text": "The name CODE means project / branch, not a directory path."
+        },
+        {
+          "at": "L239",
+          "text": "Keep UCM open."
+        },
+        {
+          "at": "L251",
+          "text": "CODE is an unsigned whole-number type; our tiny inputs avoid its numeric limits."
+        },
+        {
+          "at": "L255",
+          "text": "Save the file, then load it explicitly in UCM:"
+        },
+        {
+          "at": "L261",
+          "text": "UCM checks the definitions and evaluates the watch."
+        },
+        {
+          "at": "L269",
+          "text": "You have run Unison code."
+        },
+        {
+          "at": "L272",
+          "text": "Now save them into the database:"
+        },
+        {
+          "at": "L278",
+          "text": "UCM reports completion."
+        },
+        {
+          "at": "L283",
+          "text": "A watch is useful feedback while editing."
+        },
+        {
+          "at": "L290",
+          "text": "Read this signature in pieces."
+        },
+        {
+          "at": "L294",
+          "text": "Load the revised file, persist it, then run the entry point:"
+        },
+        {
+          "at": "L302",
+          "text": "The terminal prints CODE."
+        },
+        {
+          "at": "L305",
+          "text": "Notice the full path from text to behavior:"
+        },
+        {
+          "at": "L315",
+          "text": "UCM can also run a definition from the most recently loaded file."
+        },
+        {
+          "at": "L319",
+          "text": "We now repeat the TypeScript experiment: change the public name of the reward function."
+        },
+        {
+          "at": "L327",
+          "text": "UCM completes the rename and displays the stored caller using its current names:"
+        },
+        {
+          "at": "L334",
+          "text": "We did not edit CODE."
+        },
+        {
+          "at": "L337",
+          "text": "Run the program again:"
+        },
+        {
+          "at": "L343",
+          "text": "It still prints CODE."
+        },
+        {
+          "at": "L345",
+          "text": "Your old scratch file can still contain the spelling CODE."
+        },
+        {
+          "at": "L353",
+          "text": "UCM prepends those definitions to its most recently loaded file, using their current names."
+        },
+        {
+          "at": "L358",
+          "text": "In a content-addressed store, an item's address is derived from its contents."
+        },
+        {
+          "at": "L361",
+          "text": "For our function, Unison hashes a normalized representation of the code's structure, with resolved dependency references."
+        },
+        {
+          "at": "L379",
+          "text": "Here A and B are readable placeholders for hashes, not real UCM references."
+        },
+        {
+          "at": "L382",
+          "text": "Only the dotted name arrow moves during our rename:"
+        },
+        {
+          "at": "L394",
+          "text": "The old dotted arrow is removed; the new one replaces it."
+        },
+        {
+          "at": "L397",
+          "text": "If another programmer writes CODE with the same resolved dependencies, it has the same identity."
+        },
+        {
+          "at": "L402",
+          "text": "Both Git and Unison use hashes."
+        },
+        {
+          "at": "L405",
+          "text": "A stable identity lets another runtime request the exact definition it needs."
+        },
+        {
+          "at": "L408",
+          "text": "---"
+        },
+        {
+          "at": "L410",
+          "text": "Local examples checked with TypeScript 5.9.3, Node 22.23.1, and UCM 1.4.0."
         }
       ],
       "headings": [
-        "Give a player two stars",
-        "Rename the label; leave the program alone",
-        "The hash describes code structure, not a screenshot of text",
-        "Change the reward; create a new definition",
-        "Git uses hashes too; look at what they identify",
-        "A stable address makes more things possible"
+        "1. Start with three files and a working game",
+        "2. Git records and distributes the files",
+        "3. A partial rename breaks the build",
+        "4. Meet UCM before writing any Unison",
+        "5. Give the program a local home",
+        "6. Write the same game in one scratch file",
+        "7. Run an actual entry point",
+        "8. Rename the stored function and leave its caller alone",
+        "9. See why the rename did not break the program"
       ]
     },
     "docs/02-your-codebase-is-not-a-folder.md": {
       "stats": {
-        "sentences": 79,
-        "avg_len": 10.5,
-        "pct_over_cap": 0.0,
+        "sentences": 166,
+        "avg_len": 11.0,
+        "pct_over_cap": 0.6,
         "emdash_per_para": 0.0,
         "intensifiers": 0,
         "cap": 20,
@@ -3165,228 +3512,562 @@
       "warnings": [
         {
           "rule": "S-04",
-          "line": 38,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "By convention, dependencies live under CODE; a project's CODE is itself a documentation de"
+          "line": 6,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Keep its CODE project open: CODE adds one, and CODE prints CODE."
+        },
+        {
+          "rule": "S-01",
+          "line": 6,
+          "waiver": "Law 1: preserve the complete condition, command explanation, or technical distinction; the heuristic also joins list items.",
+          "text": "We will change the game on a branch, share it, then use the same scoring rule in a map/red"
         },
         {
           "rule": "S-04",
-          "line": 58,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "You can bring just one function out for editing."
+          "line": 40,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "A definition hash and a branch/history reference identify different things."
+        },
+        {
+          "rule": "S-04",
+          "line": 67,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "We changed one definition; UCM propagated this compatible update to its stored dependents."
+        },
+        {
+          "rule": "S-04",
+          "line": 70,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The earlier definitions remain available through the original branch."
+        },
+        {
+          "rule": "T-02",
+          "line": 81,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 5 sentences (max 4)"
         },
         {
           "rule": "S-05",
-          "line": 80,
-          "waiver": "Law 1: the artifact or value is the subject; no actor is concealed.",
-          "text": "is tested"
+          "line": 81,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "was needed"
+        },
+        {
+          "rule": "T-02",
+          "line": 85,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 5 sentences (max 4)"
         },
         {
           "rule": "S-04",
-          "line": 91,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "CODE still awards two stars."
+          "line": 85,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "If dependent types break, UCM provides a temporary branch for repairs."
         },
         {
           "rule": "S-04",
-          "line": 95,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "The bonus branch awards four stars."
+          "line": 85,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Aliases also matter: preserving another name for the old definition can keep callers attac"
         },
         {
           "rule": "S-04",
-          "line": 99,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "This is your first useful surprise: two versions of the game, sharing unchanged code, insi"
+          "line": 92,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Use CODE when investigating earlier codebase states; consult the recovery guide before a r"
+        },
+        {
+          "rule": "S-05",
+          "line": 97,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "being shared"
+        },
+        {
+          "rule": "T-02",
+          "line": 130,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 5 sentences (max 4)"
         },
         {
           "rule": "S-04",
-          "line": 103,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "You create a branch, make changes, inspect them, and merge when ready."
+          "line": 130,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Git remains useful for images, web assets, configuration, other languages, and the Markdow"
         },
         {
           "rule": "S-04",
-          "line": 107,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "In this diagram, both branch views initially point to the same code."
+          "line": 130,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Some projects keep exported CODE files and loading scripts in Git; follow their convention"
         },
         {
           "rule": "S-04",
-          "line": 122,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "CODE inspects change history; CODE helps inspect recorded movements through codebase state"
+          "line": 137,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "“Push a function to a remote UCM” blends two operations that we should name separately:"
         },
         {
           "rule": "S-04",
-          "line": 139,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Its project workflows describe branching, releases, and collaboration."
+          "line": 145,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "A distributed setup needs compatible runtimes, connectivity, and an implementation of the "
         },
         {
           "rule": "S-04",
-          "line": 144,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Unison Share hosts Unison projects and their definitions."
+          "line": 145,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Unison Cloud supplies such an environment; other deployment arrangements require their own"
+        },
+        {
+          "rule": "T-02",
+          "line": 149,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 5 sentences (max 4)"
         },
         {
           "rule": "S-04",
-          "line": 144,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "It provides browsable documentation and collaboration around projects, branches, releases,"
+          "line": 149,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "For ordinary service deployment, developers often build an artifact containing code and it"
         },
         {
           "rule": "S-04",
-          "line": 161,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Content addressing removes name/location coupling; it does not decide which competing impl"
+          "line": 168,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Builtin dependencies require compatible runtime support."
         },
         {
           "rule": "S-04",
-          "line": 167,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "A project can contain web assets, shell scripts, deployment configuration, Markdown guides"
+          "line": 179,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Keep the original reward: CODE adds one, and CODE adds two."
         },
         {
           "rule": "S-04",
-          "line": 167,
-          "waiver": "W-06: technical identifiers are reader vocabulary; this heuristic also flags ordinary verb sequences.",
-          "text": "Some projects also maintain exported CODE files and explicit loading scripts."
+          "line": 179,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Suppose we want the sum of six players' scores after celebrating each player:"
+        },
+        {
+          "rule": "S-04",
+          "line": 190,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Map transforms each item independently."
+        },
+        {
+          "rule": "S-04",
+          "line": 190,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Reduce combines the transformed values into one result."
+        },
+        {
+          "rule": "S-04",
+          "line": 223,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The opportunity is to express placement and parallelism using ordinary typed library code."
+        },
+        {
+          "rule": "T-02",
+          "line": 229,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 5 sentences (max 4)"
+        },
+        {
+          "rule": "S-04",
+          "line": 229,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The CODE ability describes remote operations such as starting and awaiting tasks."
+        },
+        {
+          "rule": "S-04",
+          "line": 233,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "It uses the Cloud starter project's installed library names."
+        },
+        {
+          "rule": "S-04",
+          "line": 240,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The inspected starter project used Cloud 27.2.0; its main branch can change, so check CODE"
+        },
+        {
+          "rule": "S-04",
+          "line": 240,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The example records this baseline instead of assuming every tutorial's commands match your"
+        },
+        {
+          "rule": "S-04",
+          "line": 244,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "In that project, load the complete companion file's Unison block as CODE."
+        },
+        {
+          "rule": "S-04",
+          "line": 244,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Its parallel calculation starts three tasks before waiting for their results:"
+        },
+        {
+          "rule": "S-04",
+          "line": 257,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "CODE selects the current region's location abstraction; CODE schedules a computation there"
+        },
+        {
+          "rule": "S-04",
+          "line": 257,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Starting all three tasks before awaiting makes their work eligible to overlap."
+        },
+        {
+          "rule": "S-04",
+          "line": 257,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The handler controls physical placement: three tasks do not guarantee three separate machi"
+        },
+        {
+          "rule": "S-04",
+          "line": 261,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Our little example sends small lists as inputs."
+        },
+        {
+          "rule": "S-04",
+          "line": 261,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The diagram's “data already on workers” case additionally needs distributed data placement"
+        },
+        {
+          "rule": "T-02",
+          "line": 276,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 5 sentences (max 4)"
+        },
+        {
+          "rule": "S-04",
+          "line": 276,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "For a persistent callable service, use CODE and a typed service reference instead."
+        },
+        {
+          "rule": "S-05",
+          "line": 299,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "is provided"
+        },
+        {
+          "rule": "S-04",
+          "line": 305,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "External protocols and stale source text still need deliberate updates."
+        },
+        {
+          "rule": "T-02",
+          "line": 312,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 5 sentences (max 4)"
+        },
+        {
+          "rule": "S-04",
+          "line": 312,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Distributed memoization libraries can also cache work using code and input identity."
+        },
+        {
+          "rule": "S-04",
+          "line": 312,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Fresh network responses, current time, or a changed database need different treatment."
+        },
+        {
+          "rule": "S-05",
+          "line": 312,
+          "waiver": "Law 1: the program, artifact, or result is the subject; no responsible actor is concealed.",
+          "text": "be reused"
+        },
+        {
+          "rule": "S-04",
+          "line": 316,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Library versions can coexist without fighting over one global name."
+        },
+        {
+          "rule": "T-02",
+          "line": 320,
+          "waiver": "Law 2: the paragraph carries one connected step and its result; the heuristic also splits identifiers and paths.",
+          "text": "paragraph has 5 sentences (max 4)"
+        },
+        {
+          "rule": "S-04",
+          "line": 320,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The engineering work shifts toward useful decisions: data placement, task size, failure ha"
+        },
+        {
+          "rule": "S-04",
+          "line": 320,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Unison reduces some coordination around packaging and references; it does not abolish dist"
+        },
+        {
+          "rule": "S-04",
+          "line": 337,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The community page also links current events and contribution opportunities; use it for sc"
+        },
+        {
+          "rule": "S-04",
+          "line": 341,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Bring the UCM version, relevant type signatures, and a small transcript when asking for he"
+        },
+        {
+          "rule": "S-04",
+          "line": 344,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "Try changing the game rule one more time."
         }
       ],
       "skim_extract": [
         {
           "at": "TITLE",
-          "text": "Your codebase is a database you can program"
+          "text": "From a saved function to a distributed program"
         },
         {
           "at": "L3",
-          "text": "Unison gives your code a home in a local database, managed by the Unison Codebase Manager, or UCM."
+          "text": "Our game survived a rename because its callers refer to definitions by identity."
         },
         {
-          "at": "L7",
-          "text": "Read the first guide for why definitions have content addresses."
+          "at": "L6",
+          "text": "This continues the TypeScript-to-Unison walkthrough."
         },
         {
-          "at": "L19",
-          "text": "The hierarchy looks familiar."
+          "at": "L12",
+          "text": "A database of definitions does not mean a flat pile of anonymous functions."
         },
         {
-          "at": "L35",
-          "text": "CODE is a qualified name."
+          "at": "L23",
+          "text": "These are useful comparisons, not identical storage models."
         },
         {
-          "at": "L38",
-          "text": "By convention, dependencies live under CODE; a project's CODE is itself a documentation definition."
+          "at": "L27",
+          "text": "Follow a branch's name to the actual definition:"
         },
         {
-          "at": "L43",
-          "text": "A scratch file is where you prepare new definitions or edit existing ones."
+          "at": "L40",
+          "text": "The same readable name can refer to different definitions on different branches."
         },
         {
-          "at": "L47",
-          "text": "Follow the arrows carefully: a successful typecheck and a saved codebase change are separate events."
+          "at": "L45",
+          "text": "Create and select a new branch in UCM:"
         },
         {
-          "at": "L58",
-          "text": "You can put several unrelated definitions in one scratch file."
+          "at": "L51",
+          "text": "The prompt changes to CODE."
         },
         {
-          "at": "L62",
-          "text": "After a successful CODE, deleting the scratch file does not delete the stored definitions."
+          "at": "L59",
+          "text": "Load and apply the behavior change on CODE, then run the existing entry point:"
         },
         {
-          "at": "L66",
-          "text": "UCM stores the program in a structured form and can display editable source again."
+          "at": "L67",
+          "text": "The program prints CODE."
+        },
+        {
+          "at": "L70",
+          "text": "Unlike the rename, this is a new program."
         },
         {
           "at": "L73",
-          "text": "The easiest reproducible version needs an installed UCM and this repository."
+          "text": "Switch back and run it:"
         },
         {
-          "at": "L80",
-          "text": "It creates a disposable codebase, executes the example, and writes CODE."
+          "at": "L81",
+          "text": "CODE prints CODE, and CODE shows recorded changes."
         },
         {
-          "at": "L83",
-          "text": "The transcript performs these UCM commands after loading the game functions from the first guide:"
+          "at": "L85",
+          "text": "A compatible update is the easy case."
         },
         {
-          "at": "L91",
-          "text": "The rename changes the available name."
+          "at": "L89",
+          "text": "For navigation, start with CODE, CODE, CODE, and CODE; CODE displays a definition."
         },
         {
-          "at": "L95",
-          "text": "Next it creates CODE, changes the reward to two stars per call, and updates the expected test result."
+          "at": "L92",
+          "text": "Use CODE when investigating earlier codebase states; consult the recovery guide before a reset."
         },
         {
-          "at": "L99",
-          "text": "This is your first useful surprise: two versions of the game, sharing unchanged code, inside one codebase."
+          "at": "L97",
+          "text": "Unison Share hosts projects for collaboration and library discovery."
         },
         {
-          "at": "L103",
-          "text": "UCM owns the version-control workflow for stored Unison code."
+          "at": "L101",
+          "text": "If you want to publish this exercise, create a Unison Share account and choose the intended project visibility there."
         },
         {
-          "at": "L107",
-          "text": "In this diagram, both branch views initially point to the same code."
+          "at": "L109",
+          "text": "The first command opens authentication; the second publishes the branch to that Share project."
         },
         {
-          "at": "L119",
-          "text": "A definition hash identifies a definition."
+          "at": "L117",
+          "text": "Their runtime computes CODE on their machine."
         },
         {
-          "at": "L122",
-          "text": "CODE inspects change history; CODE helps inspect recorded movements through codebase state."
+          "at": "L120",
+          "text": "Here is the division of responsibility:"
         },
         {
-          "at": "L126",
-          "text": "The following command families help you navigate."
+          "at": "L130",
+          "text": "Git remains useful for images, web assets, configuration, other languages, and the Markdown you are reading."
         },
         {
-          "at": "L139",
-          "text": "UCM records changes as you perform codebase operations; there is no required Git staging step for each definition."
+          "at": "L137",
+          "text": "“Push a function to a remote UCM” blends two operations that we should name separately:"
         },
         {
-          "at": "L144",
-          "text": "Unison Share hosts Unison projects and their definitions."
+          "at": "L145",
+          "text": "Opening UCM on a second laptop does not automatically turn it into a worker."
         },
         {
-          "at": "L147",
-          "text": "The familiar verbs remain useful:"
+          "at": "L149",
+          "text": "For ordinary service deployment, developers often build an artifact containing code and its dependencies, install it, then call an endpoint."
         },
         {
-          "at": "L157",
-          "text": "Use CODE when bringing a project locally to work on it."
+          "at": "L154",
+          "text": "Think of sending the computation CODE."
         },
         {
-          "at": "L161",
-          "text": "You still review behavioral changes."
+          "at": "L168",
+          "text": "This sketches the dependency-sync idea, not a literal network packet format or a promise of one round trip."
         },
         {
-          "at": "L167",
-          "text": "A project can contain web assets, shell scripts, deployment configuration, Markdown guides, and code in other languages."
+          "at": "L173",
+          "text": "On the next call, a worker that already has those definitions can reuse them."
         },
         {
-          "at": "L171",
-          "text": "This repository is a good example: GitHub hosts its guides, agent skills, and executable transcripts."
+          "at": "L179",
+          "text": "Keep the original reward: CODE adds one, and CODE adds two."
         },
         {
-          "at": "L174",
-          "text": "The practical habit is small: before editing, know the codebase, project, and branch you are working in."
+          "at": "L190",
+          "text": "Map transforms each item independently."
         },
         {
-          "at": "L177",
-          "text": "Try the rename-and-branch example, then use the Unison skill on your own project."
+          "at": "L193",
+          "text": "Here is the local calculation in Unison, assuming the original CODE is in scope:"
+        },
+        {
+          "at": "L202",
+          "text": "Loading this code evaluates the watch to CODE."
+        },
+        {
+          "at": "L205",
+          "text": "For six numbers, one machine is enough."
+        },
+        {
+          "at": "L219",
+          "text": "The large data stays near its workers; the coordinator receives small answers."
+        },
+        {
+          "at": "L223",
+          "text": "Map/reduce is not unique to Unison."
+        },
+        {
+          "at": "L229",
+          "text": "The CODE ability describes remote operations such as starting and awaiting tasks."
+        },
+        {
+          "at": "L233",
+          "text": "The companion Cloud example contains the complete game and the code below."
+        },
+        {
+          "at": "L240",
+          "text": "This downloads the starter project and selects CODE."
+        },
+        {
+          "at": "L244",
+          "text": "In that project, load the complete companion file's Unison block as CODE."
+        },
+        {
+          "at": "L257",
+          "text": "CODE selects the current region's location abstraction; CODE schedules a computation there and returns a task handle."
+        },
+        {
+          "at": "L261",
+          "text": "Our little example sends small lists as inputs."
+        },
+        {
+          "at": "L264",
+          "text": "Two entry points can use the same calculation:"
+        },
+        {
+          "at": "L276",
+          "text": "CODE submits a delayed job in an environment."
+        },
+        {
+          "at": "L280",
+          "text": "First save, load, and run locally:"
+        },
+        {
+          "at": "L288",
+          "text": "The expected result is CODE."
+        },
+        {
+          "at": "L291",
+          "text": "To actually run on Cloud, first set up a Cloud account and the intended environment."
+        },
+        {
+          "at": "L299",
+          "text": "A successful run returns CODE from the Cloud calculation."
+        },
+        {
+          "at": "L305",
+          "text": "Refactoring can preserve executable identity."
+        },
+        {
+          "at": "L308",
+          "text": "Reusable computation can cross process boundaries."
+        },
+        {
+          "at": "L312",
+          "text": "Results can be reused when the computation permits it."
+        },
+        {
+          "at": "L316",
+          "text": "Library versions can coexist without fighting over one global name."
+        },
+        {
+          "at": "L320",
+          "text": "The engineering work shifts toward useful decisions: data placement, task size, failure handling, and access to effects."
+        },
+        {
+          "at": "L326",
+          "text": "You can continue from the exact questions this experiment creates:"
+        },
+        {
+          "at": "L337",
+          "text": "Discord is the community's primary discussion hub."
+        },
+        {
+          "at": "L341",
+          "text": "A useful first contribution could be a small tested library, an improved example, or a reproducible toolchain issue."
+        },
+        {
+          "at": "L344",
+          "text": "Try changing the game rule one more time."
         }
       ],
       "headings": [
-        "Four things replace the idea of one source folder",
-        "Your editor becomes a workbench",
-        "You can watch the name change yourself",
-        "Branches keep the familiar collaboration model",
-        "Share is where teammates find your Unison project",
-        "Git still has a place around your Unison program"
+        "1. Your codebase has organization and history",
+        "2. Double-star day gets its own branch",
+        "3. Share the program with another developer",
+        "4. Remote computation needs a runtime at the other end",
+        "5. Map/reduce starts with six players",
+        "6. Make the remote calculation concrete",
+        "7. The potential extends beyond a rename",
+        "8. There are people and libraries to build with"
       ]
     },
     "examples/content-addressing.md": {
@@ -3441,40 +4122,135 @@
         }
       ],
       "headings": []
+    },
+    "examples/checks/orientation.md": {
+      "stats": {
+        "sentences": 5,
+        "avg_len": 11.4,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 47,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "An empty working file permits CODE to reconstruct the saved definitions without stale dupl"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Load, persist, run, rename, and branch the game"
+        },
+        {
+          "at": "L3",
+          "text": "This transcript installs base from Share and runs locally."
+        },
+        {
+          "at": "L47",
+          "text": "An empty working file permits CODE to reconstruct the saved definitions without stale duplicate declarations."
+        },
+        {
+          "at": "L74",
+          "text": "Check a merge on a separate branch, leaving the main/bonus comparison available for the persistence check."
+        }
+      ],
+      "headings": []
+    },
+    "examples/checks/cloud-map-reduce.md": {
+      "stats": {
+        "sentences": 6,
+        "avg_len": 10.2,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: these are necessary language/tool names or ordinary verb sequences, not stacked unexplained abstractions.",
+          "text": "The inspected starter project used Cloud 27.2.0; its main branch can change."
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Map/reduce through the local Cloud handler"
+        },
+        {
+          "at": "L3",
+          "text": "This optional transcript downloads a large public starter project and runs its Cloud handler locally."
+        },
+        {
+          "at": "L7",
+          "text": "Run CODE from the repository root."
+        }
+      ],
+      "headings": []
     }
   },
   "totals": {
-    "files": 30,
+    "files": 32,
     "fails": 0,
-    "warns": 296,
+    "warns": 369,
     "warning_rules": {
-      "S-04": 220,
-      "S-01": 12,
-      "S-05": 27,
-      "T-02": 37
+      "S-04": 267,
+      "S-01": 13,
+      "S-05": 37,
+      "T-02": 52
     }
   },
   "conservation_table": [
     {
-      "item": "README setup, skill routing, commands, baseline, research limits",
+      "item": "Names separate from hashes; AST/dependency identity; alpha-renaming; structural versus semantic identity; unique types",
       "status": "kept",
-      "where": "README.md original sections"
+      "where": "Guide 1, sections 8-9"
     },
     {
-      "item": "Orientation entry skill workflow and constraints",
-      "status": "kept",
-      "where": "skills/unison/SKILL.md existing workflow"
+      "item": "Git already content-addressed; file/module name resolution differs from definition identity",
+      "status": "expanded",
+      "where": "Guide 1, sections 1-3 and 9"
     },
     {
-      "item": "Three existing passing examples and negative control",
+      "item": "Codebase/project/branch/namespace; scratch load versus persistence; deletion and source regeneration",
       "status": "kept",
-      "where": "research/example-results.json; fourth example added"
+      "where": "Guide 1, sections 4-8; Guide 2, section 1"
     },
     {
-      "item": "Existing source observations and verification limits",
+      "item": "Compatible updates, aliases, old definitions, branches, merges, history, reflog and recovery scope",
       "status": "kept",
-      "where": "research/sources.md, research/validation.md; new evidence appended"
+      "where": "Guide 2, section 2 and existing identity transcript"
+    },
+    {
+      "item": "Share publication versus clone/library consumption; Git for surrounding files; documentation definitions",
+      "status": "kept",
+      "where": "Guide 2, section 3"
+    },
+    {
+      "item": "Pure-test caching, coexisting versions/type compatibility, distributed-code identity and operational limits",
+      "status": "expanded",
+      "where": "Guide 2, sections 4-7"
+    },
+    {
+      "item": "README installation, skill routing, baseline and research boundaries",
+      "status": "kept",
+      "where": "README original sections; new optional walkthrough checks added"
     }
   ],
-  "speculative": "The game and diagrams may help readers make the mindset shift. Reader comprehension and a wow response have not been measured."
+  "speculative": "This sequence may make the unfamiliar model easier to learn. The claimed reader wow response is not measured; single-model editorial judgment only.",
+  "plan": {
+    "reader": "A programmer familiar with TypeScript files and Git, new to Unison.",
+    "tension": "File names and source references feel like code identity; Unison preserves definition identity across naming changes.",
+    "outcome": "The reader can load, persist, run, rename, and branch a program, then explain code hosting versus remote compute.",
+    "user_preference": "Combine step-by-step commands and conceptual explanation in two guides, overriding the default separation of Diataxis page types."
+  }
 }

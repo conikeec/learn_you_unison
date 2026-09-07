@@ -6,12 +6,12 @@ Start by asking your agent to read [the Unison entry skill](skills/unison/SKILL.
 For example: “Read `skills/unison/SKILL.md`, inspect my UCM project, and implement a tested pure function.”
 The agent loads the relevant specialist, checks real signatures, and verifies the result through UCM.
 
-## New to Unison? Start with the surprise
+## New to Unison? Start with Git
 
-1. **[Your function can survive a name change](docs/01-code-that-knows-its-own-name.md)** — a game, a rename, and the hash that stays put.
-2. **[Your codebase is a database you can program](docs/02-your-codebase-is-not-a-folder.md)** — where code lives and how editing, branches, history, and sharing work.
+1. **[From Git files to Unison functions](docs/01-code-that-knows-its-own-name.md)** — build a TypeScript game, break an import, then load, run, and rename the same game in UCM.
+2. **[From a saved function to a distributed program](docs/02-your-codebase-is-not-a-folder.md)** — branches and Share, remote runtimes, a map/reduce example, and the community.
 
-Both guides use diagrams and the same executable example. No prior Unison knowledge required.
+Both guides follow one scoring example with diagrams, commands, and expected results. Start with basic TypeScript and Git knowledge; learn Unison as you go.
 
 ## Load the skills where your harness can find them
 
@@ -46,6 +46,16 @@ The runner reports failures and retains output under `.validation/` for inspecti
 python3 scripts/validate.py
 python3 scripts/run_examples.py
 ```
+
+For the Git-to-Unison walkthrough, install its TypeScript compiler locally and run the comparison check:
+
+```sh
+npm install --prefix .validation/typescript-check --no-audit --no-fund --ignore-scripts typescript@5.9.3
+python3 scripts/check_orientation.py --tsc .validation/typescript-check/node_modules/.bin/tsc
+```
+
+This checks the broken/repaired TypeScript build, a local Git remote, and fresh-process UCM behavior.
+It downloads base from Share. The optional [Cloud transcript](examples/checks/cloud-map-reduce.md) downloads a larger starter project and runs only its local handler.
 
 To inspect your installed MCP contract, run this probe. It lists tools without calling definition-changing tools.
 
