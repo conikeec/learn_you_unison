@@ -1,0 +1,26 @@
+{
+  "version": "unison version: release/1.4.0 (built on 2026-08-19)",
+  "results": [
+    {
+      "example": "abilities.md",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "example": "fundamentals.md",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "example": "update.md",
+      "passed": true,
+      "exit_code": 0
+    },
+    {
+      "example": "negative-control",
+      "passed": true,
+      "exit_code": 1
+    }
+  ],
+  "verified_on": "2026-09-06"
+}

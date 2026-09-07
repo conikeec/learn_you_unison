@@ -1,0 +1,2827 @@
+{
+  "route": "Desk row 4: documentation; how-to entrypoints and reference support",
+  "date": "2026-09-06",
+  "conservation": "Repository title renamed to Learn You Unison; technical content and verification qualifiers retained.",
+  "skim_verdict": "pass: workflows lead with context, action, and evidence",
+  "geo": {
+    "target_prompts": [
+      "How can a coding agent operate Unison effectively?",
+      "How can an agent verify Unison changes?"
+    ],
+    "extraction": [
+      "Task-specific skills",
+      "Executable UCM verification",
+      "Distinct Olki design mapping"
+    ],
+    "renderability": "plain Markdown",
+    "recommendation": "Not measured; single-model smoke assessment only"
+  },
+  "files": {
+    "README.md": {
+      "stats": {
+        "sentences": 21,
+        "avg_len": 13.5,
+        "pct_over_cap": 14.3,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "This skill set helps coding agents inspect, write, test, and maintain Unison programs."
+        },
+        {
+          "rule": "S-01",
+          "line": 6,
+          "waiver": "Law 1: retain the complete technical condition, signature, or enumerated evidence; parser also joins adjacent list items.",
+          "text": "For example: “Read CODE, inspect my UCM project, and implement a tested pure function.” Th"
+        },
+        {
+          "rule": "S-04",
+          "line": 6,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For example: “Read CODE, inspect my UCM project, and implement a tested pure function.” Th"
+        },
+        {
+          "rule": "S-04",
+          "line": 11,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The canonical skills live under CODE."
+        },
+        {
+          "rule": "S-04",
+          "line": 11,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Each directory contains standard CODE frontmatter and task instructions."
+        },
+        {
+          "rule": "S-01",
+          "line": 15,
+          "waiver": "Law 1: retain the complete technical condition, signature, or enumerated evidence; parser also joins adjacent list items.",
+          "text": "For a different harness, add this instruction to its project rules: “For Unison tasks, rea"
+        },
+        {
+          "rule": "S-04",
+          "line": 15,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For a different harness, add this instruction to its project rules: “For Unison tasks, rea"
+        },
+        {
+          "rule": "S-04",
+          "line": 43,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "It lists tools without calling definition-changing tools."
+        },
+        {
+          "rule": "S-04",
+          "line": 51,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Local test baseline: UCM release/1.4.0, built 2026-08-19."
+        },
+        {
+          "rule": "S-05",
+          "line": 51,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "was installed"
+        },
+        {
+          "rule": "S-01",
+          "line": 54,
+          "waiver": "Law 1: retain the complete technical condition, signature, or enumerated evidence; parser also joins adjacent list items.",
+          "text": "- Source catalog: primary documentation, Share, upstream agent guidance, talks, and access"
+        },
+        {
+          "rule": "S-04",
+          "line": 54,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "- Source catalog: primary documentation, Share, upstream agent guidance, talks, and access"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Learn You Unison"
+        },
+        {
+          "at": "L3",
+          "text": "This skill set helps coding agents inspect, write, test, and maintain Unison programs."
+        },
+        {
+          "at": "L6",
+          "text": "For example: “Read CODE, inspect my UCM project, and implement a tested pure function.” The agent loads the relevant specialist, checks real signatures, and verifies the result through UCM."
+        },
+        {
+          "at": "L11",
+          "text": "The canonical skills live under CODE."
+        },
+        {
+          "at": "L15",
+          "text": "For a different harness, add this instruction to its project rules: “For Unison tasks, read CODE.” Keep the bundle's CODE, CODE, CODE, and CODE paths together; references link across these directories."
+        },
+        {
+          "at": "L35",
+          "text": "Use Python 3.9 or newer and UCM."
+        },
+        {
+          "at": "L43",
+          "text": "To inspect your installed MCP contract, run this probe."
+        },
+        {
+          "at": "L51",
+          "text": "Research date: 2026-09-06."
+        },
+        {
+          "at": "L54",
+          "text": "- Source catalog: primary documentation, Share, upstream agent guidance, talks, and access limitations. - Validation report: checks executed and their limits. - Evaluation tasks: realistic prompts and observable success criteria for another harness. - Olki mapping: requirements from the neighboring CODE directory."
+        },
+        {
+          "at": "L59",
+          "text": "The Olki documents were found at CODE; the requested underscore path did not exist."
+        }
+      ],
+      "headings": [
+        "Load the skills where your harness can find them",
+        "Choose the skill that matches the task",
+        "Verify the examples on your machine",
+        "Read the evidence behind the guidance"
+      ]
+    },
+    "AGENTS.md": {
+      "stats": {
+        "sentences": 16,
+        "avg_len": 9.9,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Read skills/unison/SKILL.md for Unison language tasks."
+        },
+        {
+          "rule": "S-04",
+          "line": 6,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "This repository contains agent skills, research notes, and executable UCM examples."
+        },
+        {
+          "rule": "T-02",
+          "line": 9,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 9,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Before editing Unison definitions, establish the UCM version, codebase path, project, bran"
+        },
+        {
+          "rule": "S-04",
+          "line": 9,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Otherwise use explicit UCM commands or disposable transcripts."
+        },
+        {
+          "rule": "S-05",
+          "line": 13,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "was saved"
+        },
+        {
+          "rule": "S-04",
+          "line": 16,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Keep source dates, local verification evidence, and proposed Olki design separate."
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Work with Unison through its codebase"
+        },
+        {
+          "at": "L3",
+          "text": "Read skills/unison/SKILL.md for Unison language tasks."
+        },
+        {
+          "at": "L6",
+          "text": "This repository contains agent skills, research notes, and executable UCM examples."
+        },
+        {
+          "at": "L9",
+          "text": "Before editing Unison definitions, establish the UCM version, codebase path, project, branch, and installed libraries."
+        },
+        {
+          "at": "L13",
+          "text": "Treat CODE files as editing inputs."
+        },
+        {
+          "at": "L16",
+          "text": "When changing this skill set, run CODE and CODE."
+        }
+      ],
+      "headings": []
+    },
+    "skills/unison-olki/SKILL.md": {
+      "stats": {
+        "sentences": 20,
+        "avg_len": 11.3,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 8,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Read the design map and the relevant Olki specification before choosing a representation."
+        },
+        {
+          "rule": "S-04",
+          "line": 8,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The original request named CODE; research found the documents at CODE."
+        },
+        {
+          "rule": "S-04",
+          "line": 12,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "A neighboring implementation can exist without proving every requirement."
+        },
+        {
+          "rule": "T-02",
+          "line": 17,
+          "waiver": "T-03: these are separate ordered steps; the paragraph heuristic combines list items.",
+          "text": ""
+        },
+        {
+          "rule": "S-05",
+          "line": 17,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "being implemented"
+        },
+        {
+          "rule": "S-04",
+          "line": 26,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Olki's proposed MCP surface exposes catalog/check/run/answer/journal behavior for agent op"
+        },
+        {
+          "rule": "S-04",
+          "line": 26,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Enabling UCM MCP does not implement Olki's tools, grant filter, or suspended reasoning loo"
+        },
+        {
+          "rule": "S-04",
+          "line": 34,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Completion evidence: requirement-to-code mapping, types and effects, rejection tests, runt"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Implement Olki's rules explicitly"
+        },
+        {
+          "at": "L8",
+          "text": "Read the design map and the relevant Olki specification before choosing a representation."
+        },
+        {
+          "at": "L12",
+          "text": "The docs describe intended behavior and their README labels the design as such."
+        },
+        {
+          "at": "L17",
+          "text": "1."
+        },
+        {
+          "at": "L26",
+          "text": "UCM MCP helps a coding agent inspect and modify Unison code."
+        },
+        {
+          "at": "L30",
+          "text": "For CODE, model the run/stage correlation and validate the answer before resumption."
+        },
+        {
+          "at": "L34",
+          "text": "Completion evidence: requirement-to-code mapping, types and effects, rejection tests, runtime tests, and a list of unresolved guarantees."
+        }
+      ],
+      "headings": [
+        "Trace each guarantee to an implementation",
+        "Keep the two MCP roles distinct"
+      ]
+    },
+    "skills/unison-language/SKILL.md": {
+      "stats": {
+        "sentences": 18,
+        "avg_len": 9.9,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "T-02",
+          "line": 13,
+          "waiver": "T-03: these are separate ordered steps; the paragraph heuristic combines list items.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 35,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "These examples intentionally use builtins; application code should reuse appropriate base "
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Write against the types in the target codebase"
+        },
+        {
+          "at": "L8",
+          "text": "Inspect imported functions and constructors before using them."
+        },
+        {
+          "at": "L13",
+          "text": "1."
+        },
+        {
+          "at": "L32",
+          "text": "Do not clear a type error by broadening everything to CODE or replacing structured data with CODE."
+        },
+        {
+          "at": "L35",
+          "text": "Executable examples live in fundamentals and abilities."
+        }
+      ],
+      "headings": [
+        "Implement a typechecked slice",
+        "Diagnose the first cause"
+      ]
+    },
+    "skills/unison-research/SKILL.md": {
+      "stats": {
+        "sentences": 26,
+        "avg_len": 11.7,
+        "pct_over_cap": 7.7,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "T-02",
+          "line": 15,
+          "waiver": "T-03: these are separate ordered steps; the paragraph heuristic combines list items.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 15,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Inspect local help, MCP schemas, and installed definitions for the current project. 2."
+        },
+        {
+          "rule": "S-04",
+          "line": 15,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For a library, inspect its README and exact release through Share/UCM. 4."
+        },
+        {
+          "rule": "S-04",
+          "line": 15,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Save a concise derived note with source URL, retrieval date, version, and verification sta"
+        },
+        {
+          "rule": "S-01",
+          "line": 22,
+          "waiver": "Law 1: retain the complete technical condition, signature, or enumerated evidence; parser also joins adjacent list items.",
+          "text": "When a page returns only a JavaScript shell, use UCM's Share tools or a rendered browser; "
+        },
+        {
+          "rule": "S-04",
+          "line": 22,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "When a page returns only a JavaScript shell, use UCM's Share tools or a rendered browser; "
+        },
+        {
+          "rule": "T-02",
+          "line": 28,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-01",
+          "line": 28,
+          "waiver": "Law 1: retain the complete technical condition, signature, or enumerated evidence; parser also joins adjacent list items.",
+          "text": "Record the title, speaker, source URL, publication date when known, and whether text came "
+        },
+        {
+          "rule": "S-04",
+          "line": 28,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Record the title, speaker, source URL, publication date when known, and whether text came "
+        },
+        {
+          "rule": "S-04",
+          "line": 28,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Cross-check API names and syntax against current definitions: transcription can corrupt pu"
+        },
+        {
+          "rule": "S-04",
+          "line": 33,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Keep derived lessons and brief excerpts; avoid republishing full third-party transcripts."
+        },
+        {
+          "rule": "S-04",
+          "line": 38,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Do not add speculative rules to every skill because one example failed."
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Resolve uncertainty with primary evidence"
+        },
+        {
+          "at": "L8",
+          "text": "Start with the installed UCM version and exact package or feature in question."
+        },
+        {
+          "at": "L15",
+          "text": "1."
+        },
+        {
+          "at": "L22",
+          "text": "Use precise searches, such as CODE or an exact error message with CODE."
+        },
+        {
+          "at": "L28",
+          "text": "Prefer the publisher's transcript or captions, then the speaker's companion article or slides."
+        },
+        {
+          "at": "L33",
+          "text": "Keep derived lessons and brief excerpts; avoid republishing full third-party transcripts."
+        },
+        {
+          "at": "L38",
+          "text": "Revise the relevant specialist and add or rerun a meaningful example for behavior changes."
+        }
+      ],
+      "headings": [
+        "Verify a claim before making it an instruction",
+        "Use video transcripts without inventing evidence",
+        "Update the smallest useful reference"
+      ]
+    },
+    "skills/unison-testing/SKILL.md": {
+      "stats": {
+        "sentences": 17,
+        "avg_len": 12.1,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "T-02",
+          "line": 14,
+          "waiver": "T-03: these are separate ordered steps; the paragraph heuristic combines list items.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For pure code, use CODE watches with assertions producing test results."
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Persist intended tests, run them from the codebase, and inspect failures and cached result"
+        },
+        {
+          "rule": "S-04",
+          "line": 20,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The runner also checks that an intentionally failing test causes failure; a green process "
+        },
+        {
+          "rule": "S-04",
+          "line": 25,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Keep CODE and diagnostics as CI artifacts; check exit status and semantic failures."
+        },
+        {
+          "rule": "S-04",
+          "line": 30,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Completion evidence includes the test names, UCM/library context, result, and any external"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Test the behavior and the persistence workflow"
+        },
+        {
+          "at": "L8",
+          "text": "Choose tests that can fail for the defect or requirement in question."
+        },
+        {
+          "at": "L14",
+          "text": "1."
+        },
+        {
+          "at": "L20",
+          "text": "Run the supplied examples through the repository runner."
+        },
+        {
+          "at": "L25",
+          "text": "Pin UCM and library releases through the project's build convention."
+        },
+        {
+          "at": "L30",
+          "text": "Completion evidence includes the test names, UCM/library context, result, and any external paths left untested."
+        }
+      ],
+      "headings": [
+        "Build the smallest meaningful check",
+        "Make CI reproduce the relevant environment"
+      ]
+    },
+    "skills/unison-abilities/SKILL.md": {
+      "stats": {
+        "sentences": 23,
+        "avg_len": 9.6,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 8,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The function signature exposes required abilities; it does not describe host allowlists, t"
+        },
+        {
+          "rule": "T-02",
+          "line": 14,
+          "waiver": "T-03: these are separate ordered steps; the paragraph heuristic combines list items.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Inspect existing abilities before introducing a new one. 3."
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Implement a pure test handler first, including the normal return case. 5."
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Check repeated requests, failure behavior, and cleanup."
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Verify each handler's inferred type."
+        },
+        {
+          "rule": "S-04",
+          "line": 21,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Run the executable handler example to see two requests handled without IO."
+        },
+        {
+          "rule": "S-04",
+          "line": 26,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For a handler of an ability CODE, inspect whether it removes CODE, introduces another effe"
+        },
+        {
+          "rule": "S-04",
+          "line": 26,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Do not call every handler “pure”: a handler that translates requests into IO still require"
+        },
+        {
+          "rule": "S-04",
+          "line": 30,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Those application requirements need explicit enforcement beyond an ordinary ability declar"
+        },
+        {
+          "rule": "S-04",
+          "line": 33,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Completion evidence: declarations, caller and handler signatures, tested request paths, an"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Separate an operation from its handler"
+        },
+        {
+          "at": "L8",
+          "text": "An ability describes requests."
+        },
+        {
+          "at": "L14",
+          "text": "1."
+        },
+        {
+          "at": "L21",
+          "text": "Use handler mechanics for continuation behavior and effect rows."
+        },
+        {
+          "at": "L26",
+          "text": "For a handler of an ability CODE, inspect whether it removes CODE, introduces another effect, or changes the result type."
+        },
+        {
+          "at": "L30",
+          "text": "For Olki grants or taint, read the Olki skill."
+        },
+        {
+          "at": "L33",
+          "text": "Completion evidence: declarations, caller and handler signatures, tested request paths, and the final remaining effect requirements."
+        }
+      ],
+      "headings": [
+        "Implement one request through two interpreters",
+        "Preserve the contract when changing effects"
+      ]
+    },
+    "skills/unison-libraries/SKILL.md": {
+      "stats": {
+        "sentences": 20,
+        "avg_len": 11.2,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 8,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For remote discovery, use UCM MCP's discovered Share tools or the Share interface."
+        },
+        {
+          "rule": "T-02",
+          "line": 14,
+          "waiver": "T-03: these are separate ordered steps; the paragraph heuristic combines list items.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Inspect a small set of candidates: README, exact definitions, release identity, license, a"
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Typecheck a minimal call before building around it."
+        },
+        {
+          "rule": "T-02",
+          "line": 24,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 24,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Inspect current CODE before issuing an upgrade."
+        },
+        {
+          "rule": "S-04",
+          "line": 24,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Follow UCM's repair workflow, review changed types, and test affected callers."
+        },
+        {
+          "rule": "S-04",
+          "line": 24,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Content-addressed definitions allow versions to coexist; they do not make different type i"
+        },
+        {
+          "rule": "S-04",
+          "line": 24,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The update guide covers library upgrades."
+        },
+        {
+          "rule": "S-04",
+          "line": 31,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "When publication is requested, prepare public signatures, documentation, tests, license, a"
+        },
+        {
+          "rule": "S-04",
+          "line": 31,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Confirm the intended owner, project, branch/release, and visibility from task context."
+        },
+        {
+          "rule": "S-04",
+          "line": 31,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Use current UCM/Share commands and verify the resulting remote definitions."
+        },
+        {
+          "rule": "S-05",
+          "line": 31,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "is requested"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Select libraries by their actual contract"
+        },
+        {
+          "at": "L8",
+          "text": "Search the current project and installed dependencies first."
+        },
+        {
+          "at": "L14",
+          "text": "1."
+        },
+        {
+          "at": "L20",
+          "text": "Read library selection and release notes for discovery starting points and a dependency record."
+        },
+        {
+          "at": "L24",
+          "text": "Record the previous release and local alias."
+        },
+        {
+          "at": "L31",
+          "text": "When publication is requested, prepare public signatures, documentation, tests, license, and dependency references first."
+        }
+      ],
+      "headings": [
+        "Find a dependency and prove its fit",
+        "Upgrade through dependent repair",
+        "Publish a reviewable project"
+      ]
+    },
+    "skills/unison-services/SKILL.md": {
+      "stats": {
+        "sentences": 18,
+        "avg_len": 11.3,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 8,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Unison programs can run outside Unison Cloud; Cloud APIs belong to libraries and a deploym"
+        },
+        {
+          "rule": "S-04",
+          "line": 8,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Read service decisions before selecting dependencies or packaging."
+        },
+        {
+          "rule": "T-02",
+          "line": 14,
+          "waiver": "T-03: these are separate ordered steps; the paragraph heuristic combines list items.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Inspect the installed HTTP, JSON, IO, concurrency, or Cloud definitions relevant to the ta"
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Define the external contract: input validation, result type, expected failures, and remain"
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Test malformed input, external failure, timeout/cancellation, and cleanup where relevant. "
+        },
+        {
+          "rule": "S-04",
+          "line": 23,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "After authorized deployment, record the exact environment, returned service reference or a"
+        },
+        {
+          "rule": "S-04",
+          "line": 28,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "They still require operational failure handling and compatible deployed types."
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Choose the execution boundary first"
+        },
+        {
+          "at": "L8",
+          "text": "Distinguish a local CLI, an ordinary HTTP service, and a Unison Cloud program."
+        },
+        {
+          "at": "L14",
+          "text": "1."
+        },
+        {
+          "at": "L23",
+          "text": "Typechecked deployment code has not deployed a service."
+        },
+        {
+          "at": "L28",
+          "text": "Native Unison service calls can preserve typed interfaces across the network."
+        }
+      ],
+      "headings": [
+        "Implement the boundary with explicit failures",
+        "Separate implementation from deployment evidence"
+      ]
+    },
+    "skills/unison-ucm/SKILL.md": {
+      "stats": {
+        "sentences": 20,
+        "avg_len": 9.1,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 8,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Start with the executable version, codebase path, project/branch, and installed libraries."
+        },
+        {
+          "rule": "T-02",
+          "line": 15,
+          "waiver": "T-03: these are separate ordered steps; the paragraph heuristic combines list items.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 15,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Create or select an appropriate working branch through UCM when isolation is needed. 3."
+        },
+        {
+          "rule": "S-04",
+          "line": 15,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Preserve unique type/ability identity annotations. 4."
+        },
+        {
+          "rule": "S-04",
+          "line": 15,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Resolve any temporary update branch using UCM's diagnostics."
+        },
+        {
+          "rule": "S-05",
+          "line": 15,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "is needed"
+        },
+        {
+          "rule": "S-04",
+          "line": 23,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The current update guide describes dependent repair and temporary branches."
+        },
+        {
+          "rule": "S-05",
+          "line": 34,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "was requested"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Keep codebase state explicit"
+        },
+        {
+          "at": "L8",
+          "text": "Start with the executable version, codebase path, project/branch, and installed libraries."
+        },
+        {
+          "at": "L15",
+          "text": "1."
+        },
+        {
+          "at": "L23",
+          "text": "The current update guide describes dependent repair and temporary branches."
+        },
+        {
+          "at": "L34",
+          "text": "None of these establishes remote publication."
+        }
+      ],
+      "headings": [
+        "Use the smallest inspect-edit-verify cycle",
+        "Distinguish three kinds of evidence"
+      ]
+    },
+    "skills/unison/SKILL.md": {
+      "stats": {
+        "sentences": 24,
+        "avg_len": 9.6,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "T-02",
+          "line": 8,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 8,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The UCM codebase holds definitions, names, and history; scratch files provide an editing s"
+        },
+        {
+          "rule": "T-02",
+          "line": 15,
+          "waiver": "T-03: these are separate ordered steps; the paragraph heuristic combines list items.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 15,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Record CODE, the codebase path, project/branch, scratch directory, and installed dependenc"
+        },
+        {
+          "rule": "S-04",
+          "line": 15,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "If a UCM MCP connection exists, inspect its tools and obtain current project context."
+        },
+        {
+          "rule": "S-04",
+          "line": 15,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Inspect relevant type signatures, implement a small slice, and typecheck it."
+        },
+        {
+          "rule": "T-02",
+          "line": 35,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 35,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Avoid dumping an entire base library into context."
+        },
+        {
+          "rule": "S-04",
+          "line": 35,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "After two unsuccessful repairs using the same assumption, inspect the actual definition, s"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Establish context before writing Unison"
+        },
+        {
+          "at": "L8",
+          "text": "Unison identifies stored definitions by content hash."
+        },
+        {
+          "at": "L15",
+          "text": "1."
+        },
+        {
+          "at": "L35",
+          "text": "Read the project README, relevant signatures, and selected bodies."
+        },
+        {
+          "at": "L39",
+          "text": "Maintain a compact handoff for multi-turn work:"
+        },
+        {
+          "at": "L52",
+          "text": "This is a suggested working note, not a required extra artifact for small edits."
+        }
+      ],
+      "headings": [
+        "Select the next useful operation",
+        "Keep inspection proportional to the task"
+      ]
+    },
+    "skills/unison-ucm/references/workflows.md": {
+      "stats": {
+        "sentences": 20,
+        "avg_len": 10.9,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The command reference is a lookup aid; installed help resolves version differences."
+        },
+        {
+          "rule": "T-02",
+          "line": 22,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 22,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Inspect its destination before replacing another agent's active scratch file."
+        },
+        {
+          "rule": "S-04",
+          "line": 29,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The project workflow guide covers cloning, branches, and contributions."
+        },
+        {
+          "rule": "S-04",
+          "line": 29,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "A Git branch containing scratch files does not automatically create a UCM branch."
+        },
+        {
+          "rule": "S-05",
+          "line": 33,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "was deliberately abandoned"
+        },
+        {
+          "rule": "S-04",
+          "line": 49,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For a bug report, prefer a disposable executable transcript reproducing only the failing b"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Run UCM commands in the intended context"
+        },
+        {
+          "at": "L3",
+          "text": "Shell launch flags come from CODE; interactive commands come from CODE inside UCM."
+        },
+        {
+          "at": "L8",
+          "text": "The following are UCM prompt commands."
+        },
+        {
+          "at": "L22",
+          "text": "CODE can write to a scratch file."
+        },
+        {
+          "at": "L29",
+          "text": "Use CODE, CODE, CODE, and CODE to confirm local syntax."
+        },
+        {
+          "at": "L33",
+          "text": "Before a breaking update, record the source project/branch and history position."
+        },
+        {
+          "at": "L49",
+          "text": "Use UCM operations for its database."
+        }
+      ],
+      "headings": [
+        "Inspect before loading an edit",
+        "Branches belong to UCM",
+        "Recover the smallest state that is wrong"
+      ]
+    },
+    "skills/unison-ucm/references/mcp.md": {
+      "stats": {
+        "sentences": 36,
+        "avg_len": 10.8,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "UCM provides a stdio MCP server through CODE."
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Verify the harness's current schema before placing it."
+        },
+        {
+          "rule": "S-05",
+          "line": 14,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "is intended"
+        },
+        {
+          "rule": "T-02",
+          "line": 18,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 18,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Inspect each selected tool's current CODE, description, and side effects."
+        },
+        {
+          "rule": "S-04",
+          "line": 18,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Read project context before calls whose default target is the current project."
+        },
+        {
+          "rule": "S-04",
+          "line": 18,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Use explicit project/branch arguments where the tool supports them."
+        },
+        {
+          "rule": "S-04",
+          "line": 40,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "These include CODE, CODE, CODE, CODE, CODE, and CODE."
+        },
+        {
+          "rule": "T-02",
+          "line": 54,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 54,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "These concrete differences make schema discovery necessary."
+        },
+        {
+          "rule": "T-02",
+          "line": 59,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 59,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Inspect whether typechecking evaluates watches."
+        },
+        {
+          "rule": "S-04",
+          "line": 65,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "If a server lacks persistence or branch commands, use UCM's CLI workflow for those operati"
+        },
+        {
+          "rule": "S-04",
+          "line": 65,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "If the connection points at the wrong codebase, correct the process target before applying"
+        },
+        {
+          "rule": "S-04",
+          "line": 65,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "If simultaneous agents contend over codebase state, isolate branches and scratch files; us"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Discover the installed MCP contract"
+        },
+        {
+          "at": "L3",
+          "text": "UCM provides a stdio MCP server through CODE."
+        },
+        {
+          "at": "L7",
+          "text": "Configure an executable and arguments using the harness's current configuration mechanism."
+        },
+        {
+          "at": "L14",
+          "text": "This is a server specification fragment, not a complete harness configuration file."
+        },
+        {
+          "at": "L18",
+          "text": "On connection, discover CODE and available prompts/resources."
+        },
+        {
+          "at": "L26",
+          "text": "The official setup page lists these names; your installed server may differ."
+        },
+        {
+          "at": "L40",
+          "text": "On 2026-09-06, the disposable probe returned 29 tools."
+        },
+        {
+          "at": "L45",
+          "text": "For this version, a file-backed CODE call takes this argument shape:"
+        },
+        {
+          "at": "L54",
+          "text": "Replace the example context with the discovered target."
+        },
+        {
+          "at": "L59",
+          "text": "Do not hardcode argument names from a remembered call."
+        },
+        {
+          "at": "L65",
+          "text": "If a server lacks persistence or branch commands, use UCM's CLI workflow for those operations."
+        },
+        {
+          "at": "L70",
+          "text": "The repository includes a disposable contract probe."
+        }
+      ],
+      "headings": [
+        "Map intent to discovered tools",
+        "The local 1.4.0 probe exposes additional operations",
+        "Recover from missing tools or wrong context"
+      ]
+    },
+    "skills/unison-services/references/services.md": {
+      "stats": {
+        "sentences": 24,
+        "avg_len": 10.6,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "T-02",
+          "line": 12,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 12,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The running-program guide and local CODE distinguish runtime execution modes."
+        },
+        {
+          "rule": "S-04",
+          "line": 12,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Check native compilation support separately when that is required."
+        },
+        {
+          "rule": "S-04",
+          "line": 12,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The 1.0 overview describes deployment outside managed Cloud."
+        },
+        {
+          "rule": "S-05",
+          "line": 12,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "is required"
+        },
+        {
+          "rule": "S-04",
+          "line": 19,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Explicitly handle unexpected status, malformed bodies, and transport failure."
+        },
+        {
+          "rule": "T-02",
+          "line": 23,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 23,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Confirm acquisition/release behavior through tests."
+        },
+        {
+          "rule": "S-04",
+          "line": 27,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For persistence, distinguish Unison codebase storage from application data storage."
+        },
+        {
+          "rule": "S-04",
+          "line": 33,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Its workflow handles Cloud operations, deploys the HTTP function, and optionally assigns a"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Select a runtime and inspect its libraries"
+        },
+        {
+          "at": "L12",
+          "text": "The running-program guide and local CODE distinguish runtime execution modes."
+        },
+        {
+          "at": "L19",
+          "text": "Inspect the library's URL and request types."
+        },
+        {
+          "at": "L23",
+          "text": "Search installed concurrency APIs by signature."
+        },
+        {
+          "at": "L27",
+          "text": "For persistence, distinguish Unison codebase storage from application data storage."
+        },
+        {
+          "at": "L33",
+          "text": "The HTTP learning module supplies a project and deployment example."
+        },
+        {
+          "at": "L38",
+          "text": "Verify the returned endpoint with a representative request and inspect service logs when behavior differs from the local test."
+        }
+      ],
+      "headings": [
+        "Treat external data and concurrency as contracts",
+        "Deploy Cloud code against a verified template"
+      ]
+    },
+    "skills/unison-libraries/references/packages.md": {
+      "stats": {
+        "sentences": 27,
+        "avg_len": 11.4,
+        "pct_over_cap": 3.7,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The initial web fetch saw Share's JavaScript shell."
+        },
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "A subsequent UCM MCP lookup retrieved all four project READMEs and release metadata."
+        },
+        {
+          "rule": "S-05",
+          "line": 3,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "was executed"
+        },
+        {
+          "rule": "S-01",
+          "line": 15,
+          "waiver": "Law 1: retain the complete technical condition, signature, or enumerated evidence; parser also joins adjacent list items.",
+          "text": "Observed CODE values on 2026-09-06: base 7.19.2, HTTP 16.1.0, JSON 1.4.2, Cloud 27.3.1."
+        },
+        {
+          "rule": "S-05",
+          "line": 15,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "are dated"
+        },
+        {
+          "rule": "T-02",
+          "line": 19,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 19,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The HTTP README describes clients, servers, and WebSockets."
+        },
+        {
+          "rule": "S-04",
+          "line": 19,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Its client examples use CODE around CODE."
+        },
+        {
+          "rule": "S-04",
+          "line": 19,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "It explicitly leaves non-success HTTP status handling to the caller; receiving a response "
+        },
+        {
+          "rule": "S-04",
+          "line": 19,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The JSON README presents composable decoders and structured decoding failures."
+        },
+        {
+          "rule": "S-04",
+          "line": 19,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The base README now lists C FFI support; the old roadmap's FFI status must not override cu"
+        },
+        {
+          "rule": "S-04",
+          "line": 44,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Recheck exact names before reproducing an old example."
+        },
+        {
+          "rule": "S-04",
+          "line": 47,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The current UCM reference distinguishes dependency installation from project cloning."
+        },
+        {
+          "rule": "S-04",
+          "line": 53,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Unison documentation is stored as definitions, conventionally CODE, using documentation li"
+        },
+        {
+          "rule": "S-04",
+          "line": 53,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Include linked types and functions, runnable examples, expected errors, and effect require"
+        },
+        {
+          "rule": "S-04",
+          "line": 53,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Documenting code describes CODE literals and definition links."
+        },
+        {
+          "rule": "S-05",
+          "line": 53,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "is stored"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Inspect candidates before pinning a dependency"
+        },
+        {
+          "at": "L3",
+          "text": "These are discovery starting points, not a claim that any particular release was executed."
+        },
+        {
+          "at": "L15",
+          "text": "Observed CODE values on 2026-09-06: base 7.19.2, HTTP 16.1.0, JSON 1.4.2, Cloud 27.3.1."
+        },
+        {
+          "at": "L19",
+          "text": "The HTTP README describes clients, servers, and WebSockets."
+        },
+        {
+          "at": "L25",
+          "text": "Avoid installing a broad toolkit only because its name resembles the task."
+        },
+        {
+          "at": "L31",
+          "text": "Use a dependency note or the project's established manifest convention:"
+        },
+        {
+          "at": "L44",
+          "text": "CODE and default installation are useful for exploration, but moving targets are insufficient evidence for reproducible examples."
+        },
+        {
+          "at": "L47",
+          "text": "The current UCM reference distinguishes dependency installation from project cloning."
+        },
+        {
+          "at": "L53",
+          "text": "Unison documentation is stored as definitions, conventionally CODE, using documentation literals."
+        }
+      ],
+      "headings": [
+        "Record a reproducible choice",
+        "Documentation belongs beside the public API"
+      ]
+    },
+    "skills/unison-abilities/references/handlers.md": {
+      "stats": {
+        "sentences": 25,
+        "avg_len": 10.1,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "T-02",
+          "line": 3,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 9,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For state, the recursive handler passes updated state to the resumed computation."
+        },
+        {
+          "rule": "S-04",
+          "line": 15,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Discarding suits abort behavior; multiple resumptions can implement search."
+        },
+        {
+          "rule": "S-04",
+          "line": 19,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Test both normal completion and a request made after another request resumes."
+        },
+        {
+          "rule": "S-04",
+          "line": 19,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For resource handlers, test release after normal return, exceptions, cancellation, and aba"
+        },
+        {
+          "rule": "T-02",
+          "line": 26,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 26,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Ability FAQs discusses error representation and handler behavior."
+        },
+        {
+          "rule": "S-04",
+          "line": 32,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Test-handler success establishes domain behavior under that interpreter."
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Handle requests with explicit continuation behavior"
+        },
+        {
+          "at": "L3",
+          "text": "An inline handler uses CODE."
+        },
+        {
+          "at": "L9",
+          "text": "The continuation may issue more requests."
+        },
+        {
+          "at": "L15",
+          "text": "A handler can discard a continuation, resume it once, or resume it multiple times."
+        },
+        {
+          "at": "L19",
+          "text": "Handler nesting determines which interpreter receives a request and where other effects remain."
+        },
+        {
+          "at": "L26",
+          "text": "Return a sum when callers must inspect expected outcomes as values."
+        },
+        {
+          "at": "L32",
+          "text": "In a production review, record which requests can touch the world, which handler implements them, and which effects escape."
+        }
+      ],
+      "headings": [
+        "Continuations do not imply exactly one execution",
+        "Choose data errors or effect errors intentionally"
+      ]
+    },
+    "skills/unison-testing/references/testing.md": {
+      "stats": {
+        "sentences": 22,
+        "avg_len": 10.5,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 11,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The testing guide describes test results, test helpers, and property testing."
+        },
+        {
+          "rule": "S-04",
+          "line": 11,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Inspect the installed base definitions before choosing CODE, assertion helpers, or generat"
+        },
+        {
+          "rule": "T-02",
+          "line": 15,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 15,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "UCM 1.4.0 introduces CODE watches; read the local behavior before loading code containing "
+        },
+        {
+          "rule": "S-05",
+          "line": 15,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "be cached"
+        },
+        {
+          "rule": "T-02",
+          "line": 22,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 22,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "A CODE fence contains prompt-prefixed commands, such as CODE."
+        },
+        {
+          "rule": "S-04",
+          "line": 27,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "An expected-error stanza should contain only the failure being asserted, so an unrelated p"
+        },
+        {
+          "rule": "S-05",
+          "line": 27,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "being asserted"
+        },
+        {
+          "rule": "S-04",
+          "line": 33,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For property tests, record generator boundaries and reproducible seeds where the API permi"
+        },
+        {
+          "rule": "S-04",
+          "line": 33,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For retrying writes, exercise duplicate attempts and confirm the chosen idempotency contra"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Match the test form to the failure"
+        },
+        {
+          "at": "L11",
+          "text": "The testing guide describes test results, test helpers, and property testing."
+        },
+        {
+          "at": "L15",
+          "text": "Pure test results can be cached by definition identity."
+        },
+        {
+          "at": "L22",
+          "text": "A CODE fence introduces code."
+        },
+        {
+          "at": "L27",
+          "text": "The shell command CODE creates an isolated codebase and writes CODE."
+        },
+        {
+          "at": "L33",
+          "text": "Check typechecking, persistence, and behavioral execution independently."
+        }
+      ],
+      "headings": [
+        "Executable transcripts are Markdown programs",
+        "Preserve evidence that distinguishes failures"
+      ]
+    },
+    "skills/unison-research/references/community.md": {
+      "stats": {
+        "sentences": 8,
+        "avg_len": 12.2,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The official community guide links Discord, compiler development, and library contribution"
+        },
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Inspect current destinations before preparing a report; channel names and maintainers can "
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Include installed dependency releases; remove credentials and unrelated application data."
+        },
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For codebase corruption or migration problems, preserve diagnostics and a consistent backu"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Take a reproducible question to the right source"
+        },
+        {
+          "at": "L3",
+          "text": "The official community guide links Discord, compiler development, and library contribution paths."
+        },
+        {
+          "at": "L14",
+          "text": "Prepare enough context that another programmer can reproduce the result without your local codebase."
+        },
+        {
+          "at": "L18",
+          "text": "Drafting a report is local work."
+        }
+      ],
+      "headings": []
+    },
+    "skills/unison-research/references/talks.md": {
+      "stats": {
+        "sentences": 30,
+        "avg_len": 11.2,
+        "pct_over_cap": 10.0,
+        "emdash_per_para": 0.1,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "T-02",
+          "line": 5,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 5,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Source: Rúnar Bjarnason — Unison."
+        },
+        {
+          "rule": "S-05",
+          "line": 5,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "was read"
+        },
+        {
+          "rule": "S-01",
+          "line": 11,
+          "waiver": "Law 1: retain the complete technical condition, signature, or enumerated evidence; parser also joins adjacent list items.",
+          "text": "The publisher lists chapter starts at 00:01:45 (what Unison is), 00:09:19 (UCM), and 00:29"
+        },
+        {
+          "rule": "S-01",
+          "line": 16,
+          "waiver": "Law 1: retain the complete technical condition, signature, or enumerated evidence; parser also joins adjacent list items.",
+          "text": "- References identify particular definitions, which permits different dependency versions "
+        },
+        {
+          "rule": "S-04",
+          "line": 16,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "- References identify particular definitions, which permits different dependency versions "
+        },
+        {
+          "rule": "S-04",
+          "line": 20,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The interview also discusses future codebase manipulation and browser possibilities."
+        },
+        {
+          "rule": "S-04",
+          "line": 20,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Current UCM MCP already exposes codebase operations; inspect today's tools before repeatin"
+        },
+        {
+          "rule": "S-05",
+          "line": 23,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "is redistributed"
+        },
+        {
+          "rule": "S-04",
+          "line": 27,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Source: Paul Chiusano's conference page."
+        },
+        {
+          "rule": "S-04",
+          "line": 31,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The author's post connects content addressing to rename behavior, cached tests, and distri"
+        },
+        {
+          "rule": "S-04",
+          "line": 31,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "It predates projects, modern Share releases, and the current update workflow."
+        },
+        {
+          "rule": "S-05",
+          "line": 31,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "were retrieved"
+        },
+        {
+          "rule": "T-02",
+          "line": 37,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 37,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The official conference page advertises web development, distributed systems, and algebrai"
+        },
+        {
+          "rule": "S-01",
+          "line": 37,
+          "waiver": "Law 1: retain the complete technical condition, signature, or enumerated evidence; parser also joins adjacent list items.",
+          "text": "Use these links to find a talk on a specific gap; do not treat the event description as ev"
+        },
+        {
+          "rule": "S-05",
+          "line": 37,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "was verified"
+        },
+        {
+          "rule": "S-04",
+          "line": 44,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Record the publisher, speaker, URL, date, text acquisition method, available timestamp, an"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Use talks to explain design, then verify current behavior"
+        },
+        {
+          "at": "L5",
+          "text": "Source: Rúnar Bjarnason — Unison."
+        },
+        {
+          "at": "L11",
+          "text": "The publisher lists chapter starts at 00:01:45 (what Unison is), 00:09:19 (UCM), and 00:29:55 (content addressability)."
+        },
+        {
+          "at": "L14",
+          "text": "Derived lessons:"
+        },
+        {
+          "at": "L16",
+          "text": "- References identify particular definitions, which permits different dependency versions to coexist. - Coexistence does not make incompatible type versions interchangeable; composition can still produce a type error. - Abilities transfer control to a handler with a continuation that can resume the calling computation."
+        },
+        {
+          "at": "L20",
+          "text": "The interview also discusses future codebase manipulation and browser possibilities."
+        },
+        {
+          "at": "L23",
+          "text": "No full transcript is redistributed here."
+        },
+        {
+          "at": "L27",
+          "text": "Source: Paul Chiusano's conference page."
+        },
+        {
+          "at": "L31",
+          "text": "The author's post connects content addressing to rename behavior, cached tests, and distributed code movement."
+        },
+        {
+          "at": "L37",
+          "text": "The official conference page advertises web development, distributed systems, and algebraic effects."
+        },
+        {
+          "at": "L44",
+          "text": "Record the publisher, speaker, URL, date, text acquisition method, available timestamp, and current verification."
+        }
+      ],
+      "headings": [
+        "DevTools.fm episode 45 has a publisher transcript",
+        "Strange Loop 2019 explains the content-addressing motivation",
+        "Unison Forall 2024 supplies further research leads",
+        "Keep transcript provenance next to each new lesson"
+      ]
+    },
+    "skills/unison-language/references/language.md": {
+      "stats": {
+        "sentences": 31,
+        "avg_len": 9.4,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "T-02",
+          "line": 5,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 5,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Application uses whitespace; parentheses group expressions."
+        },
+        {
+          "rule": "S-04",
+          "line": 5,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "CODE changes name resolution within its scope; it does not install a dependency."
+        },
+        {
+          "rule": "T-02",
+          "line": 11,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 11,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Do not assume subtraction on naturals behaves like signed subtraction."
+        },
+        {
+          "rule": "S-04",
+          "line": 11,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Lists have one element type; tuples combine different types."
+        },
+        {
+          "rule": "S-04",
+          "line": 11,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "An empty list often needs context for inference."
+        },
+        {
+          "rule": "T-02",
+          "line": 17,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 17,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "CODE does not import Haskell's monadic bind syntax, and Unison is not lazy by default."
+        },
+        {
+          "rule": "S-04",
+          "line": 30,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Handle each constructor, including expected failures."
+        },
+        {
+          "rule": "S-04",
+          "line": 30,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Inspect the real CODE or domain result declaration before choosing constructor names."
+        },
+        {
+          "rule": "S-04",
+          "line": 34,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Check current record syntax against local UCM and the existing project style."
+        },
+        {
+          "rule": "S-04",
+          "line": 34,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Data type identity explains structural and unique declarations."
+        },
+        {
+          "rule": "S-04",
+          "line": 50,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Treat language features under development as unverified until the installed version accept"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Read Unison syntax by its meaning"
+        },
+        {
+          "at": "L5",
+          "text": "CODE accepts one argument and returns a function accepting the next."
+        },
+        {
+          "at": "L11",
+          "text": "CODE represents nonnegative integers."
+        },
+        {
+          "at": "L17",
+          "text": "CODE abbreviates CODE."
+        },
+        {
+          "at": "L25",
+          "text": "CODE makes identity depend on structure."
+        },
+        {
+          "at": "L30",
+          "text": "Pattern matching uses CODE or CODE for a function defined by cases."
+        },
+        {
+          "at": "L34",
+          "text": "Named records supply fields and generated operations, but are not unrestricted structural row types."
+        },
+        {
+          "at": "L50",
+          "text": "The general FAQ documents differences from Haskell."
+        }
+      ],
+      "headings": [
+        "Functions are curried and values evaluate eagerly",
+        "A delay is a function awaiting unit",
+        "Data declarations choose identity as well as shape",
+        "Transfer concepts without importing unsupported features"
+      ]
+    },
+    "skills/unison-olki/references/design-map.md": {
+      "stats": {
+        "sentences": 33,
+        "avg_len": 12.9,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "This is an implementation analysis of the local Olki documents, reviewed 2026-09-06."
+        },
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "It proposes boundaries; it does not assert that the separate Olki implementation satisfies"
+        },
+        {
+          "rule": "T-02",
+          "line": 23,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 23,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Do not substitute a UCM definition hash for an Olki record hash merely because both are co"
+        },
+        {
+          "rule": "S-04",
+          "line": 23,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Test normalization with rename invariance, changed literals, dependency changes, and seria"
+        },
+        {
+          "rule": "S-04",
+          "line": 31,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "It does not automatically enforce Olki's value-level host scopes or its grant-specific rea"
+        },
+        {
+          "rule": "S-04",
+          "line": 42,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "If agents submit pipe text or JSON graphs, the Unison compiler cannot typecheck each futur"
+        },
+        {
+          "rule": "S-04",
+          "line": 42,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Represent the IR with Unison data types, then implement Olki's checking rules over that re"
+        },
+        {
+          "rule": "S-04",
+          "line": 42,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Choose how that evidence resists invalid construction within the implementation; a type na"
+        },
+        {
+          "rule": "T-02",
+          "line": 47,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 47,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Preserve section 22's requirement dependencies where the project already uses them."
+        },
+        {
+          "rule": "S-04",
+          "line": 52,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Sections 03 and 23 need interpretation together: the former rejects unhandled terminal fai"
+        },
+        {
+          "rule": "S-04",
+          "line": 52,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Before implementing that boundary, determine how a circuit declares exported failure arms "
+        },
+        {
+          "rule": "S-04",
+          "line": 52,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Record the chosen interpretation with tests instead of silently choosing whichever rule ma"
+        },
+        {
+          "rule": "S-04",
+          "line": 58,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Changing a model to a cheaper reasoner requires Olki's explicit ordering; Unison does not "
+        },
+        {
+          "rule": "S-04",
+          "line": 62,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Hash identity also does not prove authorization, runtime environment compatibility, secret"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Map Olki requirements to Unison mechanisms"
+        },
+        {
+          "at": "L3",
+          "text": "This is an implementation analysis of the local Olki documents, reviewed 2026-09-06."
+        },
+        {
+          "at": "L23",
+          "text": "Olki section 02 specifies BLAKE3 over a normalized canonical serialization."
+        },
+        {
+          "at": "L31",
+          "text": "A Unison ability can separate HTTP operations from their handler."
+        },
+        {
+          "at": "L36",
+          "text": "The specification's CODE, CODE, and linearity annotations are Olki notation."
+        },
+        {
+          "at": "L42",
+          "text": "If agents submit pipe text or JSON graphs, the Unison compiler cannot typecheck each future graph at compile time."
+        },
+        {
+          "at": "L47",
+          "text": "For a vertical slice, consider CODE with one narrow effect."
+        },
+        {
+          "at": "L52",
+          "text": "Sections 03 and 23 need interpretation together: the former rejects unhandled terminal failures, while the latter discusses callee failure propagation."
+        },
+        {
+          "at": "L58",
+          "text": "Matching a crystallized stage's type does not prove matching behavior."
+        },
+        {
+          "at": "L62",
+          "text": "Hash identity also does not prove authorization, runtime environment compatibility, secret availability, or exactly-once external writes."
+        }
+      ],
+      "headings": [
+        "Code identity and circuit identity are different contracts",
+        "An ability row does not enforce a scoped grant",
+        "A dynamic circuit needs a dynamic checker",
+        "Preserve requirements that code hashes cannot prove"
+      ]
+    },
+    "research/sources.md": {
+      "stats": {
+        "sentences": 19,
+        "avg_len": 12.3,
+        "pct_over_cap": 5.3,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The catalog records inspected sources, access limits, and the skills they support."
+        },
+        {
+          "rule": "S-01",
+          "line": 51,
+          "waiver": "Law 1: retain the complete technical condition, signature, or enumerated evidence; parser also joins adjacent list items.",
+          "text": "- MCP contract: 29 tools returned by a disposable UCM process. - Share observations: retri"
+        },
+        {
+          "rule": "S-04",
+          "line": 51,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "- MCP contract: 29 tools returned by a disposable UCM process. - Share observations: retri"
+        },
+        {
+          "rule": "S-04",
+          "line": 56,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "No Cloud deployment, external service mutation, or library compatibility matrix was tested"
+        },
+        {
+          "rule": "S-05",
+          "line": 56,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "was tested"
+        },
+        {
+          "rule": "T-02",
+          "line": 61,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 68,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "A roadmap is evidence of intent; local schemas, release notes, and executed examples estab"
+        },
+        {
+          "rule": "S-04",
+          "line": 72,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Upstream agent instructions informed signature inspection and incremental typechecking."
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Sources and verification boundaries"
+        },
+        {
+          "at": "L3",
+          "text": "Research date: 2026-09-06."
+        },
+        {
+          "at": "L51",
+          "text": "- MCP contract: 29 tools returned by a disposable UCM process. - Share observations: retrieved release metadata and README fingerprints for four projects. - Executable examples: original code checked against the installed runtime. - Talk notes: derived lessons and exact transcript access status."
+        },
+        {
+          "at": "L56",
+          "text": "The Share README tool does not pin a release."
+        },
+        {
+          "at": "L61",
+          "text": "The requested CODE path was absent."
+        },
+        {
+          "at": "L68",
+          "text": "Retain concise paraphrases and source links."
+        },
+        {
+          "at": "L72",
+          "text": "Upstream agent instructions informed signature inspection and incremental typechecking."
+        }
+      ],
+      "headings": [
+        "Primary sources support the operational guidance",
+        "Local evidence strengthens the documentation",
+        "Olki supplies requirements, not Unison language facts",
+        "Maintain a dated claim instead of a copied manual"
+      ]
+    },
+    "research/validation.md": {
+      "stats": {
+        "sentences": 39,
+        "avg_len": 10.5,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 14,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The process logs and output transcripts remain under ignored CODE paths."
+        },
+        {
+          "rule": "S-04",
+          "line": 18,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The first drafts exposed incorrect builtin qualification and a missing CODE in the inline "
+        },
+        {
+          "rule": "S-04",
+          "line": 18,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The corrected examples passed after UCM diagnostics identified the errors."
+        },
+        {
+          "rule": "S-04",
+          "line": 23,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "This avoids initial codebase-creation messages sharing stdout with the MCP JSON response o"
+        },
+        {
+          "rule": "S-04",
+          "line": 28,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Optional Share lookups retrieved metadata and READMEs for base, HTTP, JSON, and Cloud with"
+        },
+        {
+          "rule": "S-05",
+          "line": 28,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "were called"
+        },
+        {
+          "rule": "S-04",
+          "line": 34,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "CODE checks skill names, descriptions, relative links, source records, and repository disc"
+        },
+        {
+          "rule": "S-04",
+          "line": 34,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The skill-creator validator checks all nine skill entrypoints independently of that script"
+        },
+        {
+          "rule": "S-04",
+          "line": 40,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The Strange Loop recording fetch failed, and individual Forall talk transcripts were not r"
+        },
+        {
+          "rule": "S-05",
+          "line": 40,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "was retrieved"
+        },
+        {
+          "rule": "S-04",
+          "line": 44,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "No Cloud deployment, HTTP integration execution, FFI call, dependency upgrade, or unique-t"
+        },
+        {
+          "rule": "S-04",
+          "line": 44,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The Olki mapping reflects design documents and identifies implementation responsibilities;"
+        },
+        {
+          "rule": "S-04",
+          "line": 44,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Multi-harness behavioral evaluation remains unrun."
+        },
+        {
+          "rule": "S-04",
+          "line": 44,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Fourteen scenarios define observable criteria for that work."
+        },
+        {
+          "rule": "S-05",
+          "line": 44,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "was executed"
+        },
+        {
+          "rule": "S-04",
+          "line": 50,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Skill workflows use how-to form; detailed mechanics and source records use reference form."
+        },
+        {
+          "rule": "S-04",
+          "line": 50,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The bundle uses its own Unison/Olki scope; Modiqo/Rote marketing claims do not apply."
+        },
+        {
+          "rule": "S-04",
+          "line": 54,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The deterministic lint output, warning dispositions, and skim extracts are recorded in the"
+        },
+        {
+          "rule": "S-04",
+          "line": 54,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The entrypoints state the next operation and verification evidence before conditional deta"
+        },
+        {
+          "rule": "S-04",
+          "line": 54,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Conservation: not applicable to this new corpus; source-derived claims retain links and ve"
+        },
+        {
+          "rule": "S-05",
+          "line": 54,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "are recorded"
+        },
+        {
+          "rule": "T-02",
+          "line": 58,
+          "waiver": "Law 2: this short reference block explains one operation or evidence boundary; keep its qualifications together.",
+          "text": ""
+        },
+        {
+          "rule": "S-04",
+          "line": 58,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "GEO extraction: the bundle supplies task-specific Unison guidance, executable verification"
+        },
+        {
+          "rule": "S-04",
+          "line": 58,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Plain Markdown makes them available without JavaScript rendering."
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Validation and remaining limits"
+        },
+        {
+          "at": "L3",
+          "text": "Validation date: 2026-09-06."
+        },
+        {
+          "at": "L14",
+          "text": "Run CODE to reproduce these checks."
+        },
+        {
+          "at": "L18",
+          "text": "The first drafts exposed incorrect builtin qualification and a missing CODE in the inline handler."
+        },
+        {
+          "at": "L23",
+          "text": "CODE initialized an isolated UCM MCP process and retrieved 29 tool schemas."
+        },
+        {
+          "at": "L28",
+          "text": "Optional Share lookups retrieved metadata and READMEs for base, HTTP, JSON, and Cloud without installing those libraries."
+        },
+        {
+          "at": "L34",
+          "text": "CODE checks skill names, descriptions, relative links, source records, and repository discovery symlinks."
+        },
+        {
+          "at": "L40",
+          "text": "The DevTools.fm publisher transcript was retrieved and read."
+        },
+        {
+          "at": "L44",
+          "text": "No Cloud deployment, HTTP integration execution, FFI call, dependency upgrade, or unique-type migration was executed."
+        },
+        {
+          "at": "L50",
+          "text": "Desk route: row 4, documentation."
+        },
+        {
+          "at": "L54",
+          "text": "The deterministic lint output, warning dispositions, and skim extracts are recorded in the editorial review."
+        },
+        {
+          "at": "L58",
+          "text": "GEO extraction: the bundle supplies task-specific Unison guidance, executable verification, and a distinct Olki design mapping."
+        }
+      ],
+      "headings": [
+        "Executable examples pass in disposable codebases",
+        "The MCP contract was discovered from a running server",
+        "Structural checks cover packaging and references",
+        "Research has explicit limits",
+        "Editorial review preserves the technical distinctions"
+      ]
+    },
+    "evals/scenarios.md": {
+      "stats": {
+        "sentences": 10,
+        "avg_len": 11.4,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-04",
+          "line": 3,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "The evaluator should inspect tool calls, diagnostics, stored definitions, and test output."
+        },
+        {
+          "rule": "S-04",
+          "line": 24,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "Track attempted API guesses, typecheck/repair turns, inspected definitions, and completion"
+        },
+        {
+          "rule": "S-05",
+          "line": 24,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "are proposed"
+        },
+        {
+          "rule": "S-04",
+          "line": 28,
+          "waiver": "W-06: language and tool identifiers are reader vocabulary; the heuristic also flags ordinary verb sequences.",
+          "text": "For a comparative run, use the same version, dependencies, prompt, fixture, and time allow"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Evaluate observable agent behavior"
+        },
+        {
+          "at": "L3",
+          "text": "These scenarios are evaluation prompts, not claims that multiple harnesses have passed them."
+        },
+        {
+          "at": "L24",
+          "text": "Record a pass only when all conditions hold."
+        },
+        {
+          "at": "L28",
+          "text": "For a comparative run, use the same version, dependencies, prompt, fixture, and time allowance with and without these skills."
+        }
+      ],
+      "headings": []
+    },
+    "examples/fundamentals.md": {
+      "stats": {
+        "sentences": 5,
+        "avg_len": 8.4,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Check pure functions in an isolated codebase"
+        },
+        {
+          "at": "L3",
+          "text": "This transcript uses only builtins."
+        },
+        {
+          "at": "L10",
+          "text": "The tests check a boundary value, a polymorphic function, and a forced delayed computation."
+        },
+        {
+          "at": "L40",
+          "text": "Persist the definitions, then run the stored tests."
+        }
+      ],
+      "headings": []
+    },
+    "examples/update.md": {
+      "stats": {
+        "sentences": 4,
+        "avg_len": 8.8,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [
+        {
+          "rule": "S-05",
+          "line": 3,
+          "waiver": "Law 1: the versioned artifact or returned value is the topic; no decision-making actor is concealed.",
+          "text": "is stored"
+        }
+      ],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Verify that an update reaches dependent definitions"
+        },
+        {
+          "at": "L3",
+          "text": "Run CODE in a disposable codebase."
+        },
+        {
+          "at": "L23",
+          "text": "Changing CODE should update CODE to use the new definition."
+        },
+        {
+          "at": "L36",
+          "text": "The assertion detects a caller that still uses the old dependency."
+        }
+      ],
+      "headings": []
+    },
+    "examples/abilities.md": {
+      "stats": {
+        "sentences": 3,
+        "avg_len": 11.3,
+        "pct_over_cap": 0.0,
+        "emdash_per_para": 0.0,
+        "intensifiers": 0,
+        "cap": 20,
+        "format": "docs"
+      },
+      "fails": [],
+      "warnings": [],
+      "skim_extract": [
+        {
+          "at": "TITLE",
+          "text": "Handle a request and resume its computation"
+        },
+        {
+          "at": "L3",
+          "text": "Run CODE to test a handler without network access or a base installation."
+        },
+        {
+          "at": "L9",
+          "text": "The handler supplies a value, then reinstalls itself when resuming the continuation."
+        }
+      ],
+      "headings": []
+    }
+  },
+  "totals": {
+    "files": 27,
+    "fails": 0,
+    "warns": 253,
+    "warning_rules": {
+      "S-04": 184,
+      "S-01": 10,
+      "S-05": 25,
+      "T-02": 34
+    }
+  }
+}

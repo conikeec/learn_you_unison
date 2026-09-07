@@ -1,0 +1,1225 @@
+{
+  "ucm_version": "unison version: release/1.4.0 (built on 2026-08-19)",
+  "initialize": {
+    "capabilities": {
+      "prompts": {
+        "listChanged": true
+      },
+      "resources": {
+        "listChanged": true
+      },
+      "tools": {
+        "listChanged": true
+      }
+    },
+    "instructions": "\n        This server provides tools for interacting with Unison Code locally, such as typechecking or reading\n        documentation, as well as tools for searching Unison Share, which is a platform for sharing Unison projects and\n        libraries.\n\n        It also provides some mechanisms for editing and updating local Unison projects, such as installing libraries\n        from Unison Share.\n\n        Before doing any work in unison please read the file://unison-guide resource for information on how to write\n        Unison.\n    ",
+    "protocolVersion": "2024-11-05",
+    "serverInfo": {
+      "name": "unison-mcp",
+      "version": "0.0.1"
+    }
+  },
+  "tools": [
+    {
+      "annotations": {
+        "destructive": true,
+        "idempotent": false,
+        "openWorld": true,
+        "readOnly": false,
+        "title": "Install Library"
+      },
+      "description": "Install a library from Unison Share into the specified project.",
+      "inputSchema": {
+        "properties": {
+          "libBranchName": {
+            "description": "The optional branch of the library project to install, E.g. `main`. If null, the latest release will be used.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "libProjectName": {
+            "The user-qualified name of the library project to install, e.g. `@unison/base` or `@ceedubs/json`": "The name of the library project to install",
+            "type": "string"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "projectContext",
+          "libProjectName"
+        ],
+        "type": "object"
+      },
+      "name": "lib-install"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": true,
+        "readOnly": true,
+        "title": "Share Project Search"
+      },
+      "description": "Search Unison Share for projects and libraries.",
+      "inputSchema": {
+        "properties": {
+          "query": {
+            "description": "The search query to use. E.g. \"http client\". By default, each search word is ANDed together, but you can use OR to search for multiple terms. E.g. \"http OR client\" will return results that match either term. You can also exclude results using \"-\", e.g. \"-http\" will exclude results that match the term \"http\". Wrap a term in quotes to search for an exact phrase, e.g. \"\"http client\"\" will search for the exact phrase \"http client\".",
+            "type": "string"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "type": "object"
+      },
+      "name": "share-project-search"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": true,
+        "readOnly": true,
+        "title": "Share Project Info"
+      },
+      "description": "Get project information from Unison Share, including the latest release version. Requires authentication for private projects.",
+      "inputSchema": {
+        "properties": {
+          "projectName": {
+            "description": "The full project name including owner, e.g. `@unison/base` or `@owner/project-name`",
+            "type": "string"
+          }
+        },
+        "required": [
+          "projectName"
+        ],
+        "type": "object"
+      },
+      "name": "share-project-info"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "Typecheck Code"
+      },
+      "description": " Typecheck a code snippet within the context of a project. Only definitions which which are part of libraries or which have been previously added or updated will be available to reference within code.\n\n          The result will indicate any errors and suggested fixes, or will indicate that the code typechecks and is ready to add or update.\n\n          If you would like to test the behaviour of any pure functions, you may prefix a code snippet with an angle bracket.\n\n          e.g.\n\n          ```\n          > 1 + 2\n          ```\n\n          Or\n\n          ```\n          > let\n              isGreaterThan3 x = x > 3\n              isGreaterThan3 4\n          ```\n\n          If you wish to write unit tests, you may do so like this:\n\n          ```\n          test> Nat.tests.additionIsCommutative = test.verify do\n            Each.repeat 100\n            n = Random.natIn 0 1000\n            m = Random.natIn 0 1000\n            ensureEqual (n + m) (m + n)\n          ```\n\n          If you intend to update code, you may call the Update Definitions tool directly instead, it will typecheck and update in one step.\n        ",
+      "inputSchema": {
+        "properties": {
+          "code": {
+            "additionalProperties": false,
+            "description": "The source code to typecheck. Either the `sourceCode` key or the `filePath`, but not both.",
+            "maxProperties": 1,
+            "minProperties": 1,
+            "properties": {
+              "filePath": {
+                "description": "The absolute file path to the source code to typecheck.",
+                "type": "string"
+              },
+              "sourceCode": {
+                "description": "The source code to typecheck.",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "projectContext",
+          "code"
+        ],
+        "type": "object"
+      },
+      "name": "typecheck-code"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "Documentation"
+      },
+      "description": "Fetch documentation for a definition in a local project.",
+      "inputSchema": {
+        "properties": {
+          "name": {
+            "description": "The definition name to fetch documentation for. E.g. `README` or `data.Map.fromList`",
+            "type": "string"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "name",
+          "projectContext"
+        ],
+        "type": "object"
+      },
+      "name": "docs"
+    },
+    {
+      "annotations": {
+        "destructive": true,
+        "idempotent": false,
+        "openWorld": false,
+        "readOnly": false,
+        "title": "Run"
+      },
+      "description": "Execute/Run a given definition.",
+      "inputSchema": {
+        "properties": {
+          "args": {
+            "description": "The arguments to pass to the main function.",
+            "items": {
+              "description": "An argument to pass to the main function.",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "mainFunctionName": {
+            "description": "The name of the main function to run, e.g. `main` or `mynamespace.myprogram`.",
+            "type": "string"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "projectContext",
+          "mainFunctionName",
+          "args"
+        ],
+        "type": "object"
+      },
+      "name": "run"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": true,
+        "readOnly": true,
+        "title": "Project README"
+      },
+      "description": "Fetch the README for a project from Unison Share. Read the markdownReadMe value in the response.",
+      "inputSchema": {
+        "properties": {
+          "projectName": {
+            "description": "The name of the project to fetch the README for. E.g. in a project reference like `@owner/project-name` this would be `project-name`",
+            "type": "string"
+          },
+          "projectOwnerHandle": {
+            "description": "The handle of the project owner, e.g. in a project reference like `@owner/project-name` this would be `owner`",
+            "type": "string"
+          }
+        },
+        "required": [
+          "projectName",
+          "projectOwnerHandle"
+        ],
+        "type": "object"
+      },
+      "name": "share-project-readme"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "List Project Definitions"
+      },
+      "description": "List all definitions in the provided project.",
+      "inputSchema": {
+        "properties": {
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "projectContext"
+        ],
+        "type": "object"
+      },
+      "name": "list-project-definitions"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "List Project Libraries"
+      },
+      "description": "List the all libraries in the provided project's lib namespace.",
+      "inputSchema": {
+        "properties": {
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "projectContext"
+        ],
+        "type": "object"
+      },
+      "name": "list-project-libraries"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "List Library Definitions"
+      },
+      "description": "List all definitions in the specified library.",
+      "inputSchema": {
+        "properties": {
+          "libName": {
+            "description": "The name of the library to list definitions for, e.g. `base` or `json`.",
+            "type": "string"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "projectContext",
+          "libName"
+        ],
+        "type": "object"
+      },
+      "name": "list-library-definitions"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "View Definitions"
+      },
+      "description": "View the source code of the specified definitions. Definitions inside a library must be prefixed by their full library prefix, e.g. `lib.unison_base_1_0_0.data.List`",
+      "inputSchema": {
+        "properties": {
+          "names": {
+            "description": "The names of the definitions to view.",
+            "items": {
+              "description": "The names of the definitions to view, e.g. `mynamespace.foo` or `lib.unison_base_1_0_0.data.List`.",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "projectContext",
+          "names"
+        ],
+        "type": "object"
+      },
+      "name": "view-definitions"
+    },
+    {
+      "annotations": {
+        "destructive": true,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": false,
+        "title": "Update Definitions"
+      },
+      "description": "Typecheck, then update definitions in the codebase to the provided code.",
+      "inputSchema": {
+        "properties": {
+          "code": {
+            "additionalProperties": false,
+            "description": "The source code to update definitions to. Either the `sourceCode` key or the `filePath`, but not both.",
+            "maxProperties": 1,
+            "minProperties": 1,
+            "properties": {
+              "filePath": {
+                "description": "The absolute file path to the source code.",
+                "type": "string"
+              },
+              "sourceCode": {
+                "description": "The source code to update definitions to.",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "projectContext",
+          "code"
+        ],
+        "type": "object"
+      },
+      "name": "update-definitions"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "Diff Update"
+      },
+      "description": "Show a diff of what changes would be made if `update` were run with the provided code. This is a read-only preview that doesn't modify the codebase.",
+      "inputSchema": {
+        "properties": {
+          "code": {
+            "description": "The source code to diff against the current codebase. If a string, it is the source code itself. If a file path, it is the path to a file containing the source code.",
+            "oneOf": [
+              {
+                "additionalProperties": false,
+                "description": "The file path to the source code.",
+                "properties": {
+                  "filePath": {
+                    "description": "An absolute file path to the source code.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "filePath"
+                ],
+                "type": "object"
+              },
+              {
+                "additionalProperties": false,
+                "description": "The source code to use.",
+                "properties": {
+                  "text": {
+                    "description": "The source code.",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "text"
+                ],
+                "type": "object"
+              }
+            ]
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "projectContext",
+          "code"
+        ],
+        "type": "object"
+      },
+      "name": "diff-update"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "List Local Projects"
+      },
+      "description": "List all local projects.",
+      "inputSchema": {
+        "properties": {},
+        "required": [],
+        "type": "object"
+      },
+      "name": "list-local-projects"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "List Project Branches"
+      },
+      "description": "List all branches of a project.",
+      "inputSchema": {
+        "properties": {
+          "projectName": {
+            "description": "The name of a project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+            "type": "string"
+          }
+        },
+        "required": [
+          "projectName"
+        ],
+        "type": "object"
+      },
+      "name": "list-project-branches"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "Get Current Project Context"
+      },
+      "description": "Get the current project context. This is useful for determining the user's working branch, but all commands take an explicit project context, so it's unnecessary if you already know which context is desired.",
+      "inputSchema": {
+        "properties": {},
+        "required": [],
+        "type": "object"
+      },
+      "name": "get-current-project-context"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "Search Definitions By Name"
+      },
+      "description": "Search for definitions in the current project or its library dependencies by name.",
+      "inputSchema": {
+        "properties": {
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          },
+          "query": {
+            "description": "A name to search for, e.g. `foldl`.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "projectContext",
+          "query"
+        ],
+        "type": "object"
+      },
+      "name": "search-definitions-by-name"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "Search Definitions By Type"
+      },
+      "description": "Search for definitions in the current project or its library dependencies by type.",
+      "inputSchema": {
+        "properties": {
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          },
+          "query": {
+            "description": "A type to search for, e.g. `[Nat] -> Nat`.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "projectContext",
+          "query"
+        ],
+        "type": "object"
+      },
+      "name": "search-by-type"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "List all definitions a given term or type depends on."
+      },
+      "description": "List the dependencies of a definition.",
+      "inputSchema": {
+        "properties": {
+          "definitionName": {
+            "description": "The name of the definition to work with, e.g. `mynamespace.foo` or `lib.unison_base_1_0_0.data.List`.",
+            "type": "string"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "definitionName",
+          "projectContext"
+        ],
+        "type": "object"
+      },
+      "name": "list-definition-dependencies"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "List all definitions that depend on a given term or type."
+      },
+      "description": "List the dependents of a definition.",
+      "inputSchema": {
+        "properties": {
+          "definitionName": {
+            "description": "The name of the definition to work with, e.g. `mynamespace.foo` or `lib.unison_base_1_0_0.data.List`.",
+            "type": "string"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "definitionName",
+          "projectContext"
+        ],
+        "type": "object"
+      },
+      "name": "list-definition-dependents"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "Run Pure Tests"
+      },
+      "description": "Run the pure tests within a project.",
+      "inputSchema": {
+        "properties": {
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          },
+          "subnamespace": {
+            "description": "An optional subnamespace within the project to run tests in. E.g. `mynamespace.tests`. If null, tests in the entire project will be run.",
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "projectContext"
+        ],
+        "type": "object"
+      },
+      "name": "run-tests"
+    },
+    {
+      "annotations": {
+        "destructive": true,
+        "idempotent": false,
+        "openWorld": false,
+        "readOnly": false,
+        "title": "Delete Definitions"
+      },
+      "description": "Delete one or more definitions (terms or types) from the codebase.",
+      "inputSchema": {
+        "properties": {
+          "force": {
+            "description": "If true, force delete even if the definition has dependents. Default is false.",
+            "type": "boolean"
+          },
+          "names": {
+            "description": "The names of the definitions to delete.",
+            "items": {
+              "description": "A definition name to delete, e.g. `mynamespace.foo` or `MyType`.",
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "projectContext",
+          "names"
+        ],
+        "type": "object"
+      },
+      "name": "delete-definitions"
+    },
+    {
+      "annotations": {
+        "destructive": true,
+        "idempotent": false,
+        "openWorld": false,
+        "readOnly": false,
+        "title": "Rename Definition"
+      },
+      "description": "Rename a definition (term, type, or namespace) by changing only its final name segment. The parent path is preserved. For example, `rename foo.bar.baz Qux` changes the name `baz` to `Qux`, producing `foo.bar.Qux`. To move a definition to a different namespace, use `move-to` instead.",
+      "inputSchema": {
+        "properties": {
+          "newNameSegment": {
+            "description": "The new name segment (final part only). For example, to rename `foo.bar` to `foo.baz`, provide `baz`. The parent path is preserved.",
+            "type": "string"
+          },
+          "oldName": {
+            "description": "The current name of the definition to rename, e.g. `mynamespace.foo` or `MyType`.",
+            "type": "string"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "projectContext",
+          "oldName",
+          "newNameSegment"
+        ],
+        "type": "object"
+      },
+      "name": "rename-definition"
+    },
+    {
+      "annotations": {
+        "destructive": true,
+        "idempotent": false,
+        "openWorld": false,
+        "readOnly": false,
+        "title": "Move Definition"
+      },
+      "description": "Move a definition (term, type, or namespace) to a completely new path. For example, `move foo.bar baz.qux` renames `foo.bar` to `baz.qux`. This changes the full path, not just the final segment.",
+      "inputSchema": {
+        "properties": {
+          "newName": {
+            "description": "The new full path for the definition, e.g. `othernamespace.bar` or `NewType`. Can move to a different namespace.",
+            "type": "string"
+          },
+          "oldName": {
+            "description": "The current full path of the definition to move, e.g. `mynamespace.foo` or `MyType`.",
+            "type": "string"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "projectContext",
+          "oldName",
+          "newName"
+        ],
+        "type": "object"
+      },
+      "name": "move-definition"
+    },
+    {
+      "annotations": {
+        "destructive": true,
+        "idempotent": false,
+        "openWorld": false,
+        "readOnly": false,
+        "title": "Move To"
+      },
+      "description": "Move one or more definitions or namespaces into a destination namespace. The final segment of each source is preserved. For example, `moveTo foo.bar dest` moves `foo.bar` into namespace `dest`, producing `dest.bar`. Multiple sources can be moved at once: `moveTo foo bar baz dest` moves all three into `dest`.",
+      "inputSchema": {
+        "properties": {
+          "destination": {
+            "description": "The destination namespace to move the sources into, e.g. `othernamespace` or `foo.bar`. Each source's final segment is preserved.",
+            "type": "string"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          },
+          "sources": {
+            "description": "The paths of the definitions or namespaces to move. The final segment of each source is preserved in the destination.",
+            "items": {
+              "description": "A path to move, e.g. `mynamespace.foo` or `MyType`.",
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          }
+        },
+        "required": [
+          "projectContext",
+          "sources",
+          "destination"
+        ],
+        "type": "object"
+      },
+      "name": "move-to"
+    },
+    {
+      "annotations": {
+        "destructive": true,
+        "idempotent": false,
+        "openWorld": false,
+        "readOnly": false,
+        "title": "Delete Namespace"
+      },
+      "description": "Delete a namespace and all definitions within it from the codebase.",
+      "inputSchema": {
+        "properties": {
+          "force": {
+            "description": "If true, force delete even if definitions in the namespace have dependents. Default is false.",
+            "type": "boolean"
+          },
+          "namespaceName": {
+            "description": "The name of the namespace to delete, e.g. `mynamespace` or `foo.bar`. This will delete the namespace and all definitions within it.",
+            "type": "string"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "projectContext",
+          "namespaceName"
+        ],
+        "type": "object"
+      },
+      "name": "delete-namespace"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "Reflog"
+      },
+      "description": "Get the reflog (history of branch state changes) for a project or branch. Returns structured data about recent changes.",
+      "inputSchema": {
+        "properties": {
+          "includeTimestamps": {
+            "description": "Whether to include timestamps in the output. Default is true.",
+            "type": "boolean"
+          },
+          "limit": {
+            "description": "Maximum number of entries to return. Default is 100.",
+            "type": "integer"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          },
+          "scope": {
+            "description": "The scope of the reflog: 'branch' (default) shows entries for the current branch, 'project' shows entries for all branches in the project, 'global' shows entries for all projects.",
+            "enum": [
+              "branch",
+              "project",
+              "global"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "projectContext"
+        ],
+        "type": "object"
+      },
+      "name": "reflog"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": true,
+        "openWorld": false,
+        "readOnly": true,
+        "title": "History"
+      },
+      "description": "Get the causal history of a branch, showing changes over time. Returns structured data about commits and diffs.",
+      "inputSchema": {
+        "properties": {
+          "diffLimit": {
+            "description": "Maximum number of diff elements to show per entry. Default is 10.",
+            "type": "integer"
+          },
+          "limit": {
+            "description": "Maximum number of history entries to return. Default is 100.",
+            "type": "integer"
+          },
+          "projectContext": {
+            "properties": {
+              "branchName": {
+                "description": "The branch of the project to work within, e.g. `main` or `develop`",
+                "type": "string"
+              },
+              "projectName": {
+                "description": "The name of the project to work within, e.g. `@unison/base` or `@ceedubs/json`",
+                "type": "string"
+              }
+            },
+            "required": [
+              "projectName",
+              "branchName"
+            ],
+            "type": "object"
+          },
+          "startHash": {
+            "description": "Optional causal hash to start history from. If not provided, starts from the current branch head.",
+            "type": "string"
+          }
+        },
+        "required": [
+          "projectContext"
+        ],
+        "type": "object"
+      },
+      "name": "history"
+    },
+    {
+      "annotations": {
+        "destructive": false,
+        "idempotent": false,
+        "openWorld": false,
+        "readOnly": false,
+        "title": "Create Branch"
+      },
+      "description": "Create a new branch in a project. Can create from the current context, as an empty branch, or from an existing branch.",
+      "inputSchema": {
+        "properties": {
+          "newBranchName": {
+            "description": "The name for the new branch, e.g. `feature/my-feature` or `develop`",
+            "type": "string"
+          },
+          "projectName": {
+            "description": "The name of the project to create the branch in, e.g. `@unison/base` or `@ceedubs/json`",
+            "type": "string"
+          },
+          "sourceBranchName": {
+            "description": "When sourceType is 'branch', the name of the source branch to copy from.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sourceBranchProject": {
+            "description": "When sourceType is 'branch', the project containing the source branch. Optional - defaults to the target project if not specified.",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sourceType": {
+            "description": "The source for the new branch: 'current' creates from current context, 'empty' creates an empty branch, 'branch' creates from an existing branch specified by sourceBranchProject and sourceBranchName",
+            "enum": [
+              "current",
+              "empty",
+              "branch"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "projectName",
+          "newBranchName",
+          "sourceType"
+        ],
+        "type": "object"
+      },
+      "name": "create-branch"
+    }
+  ]
+}

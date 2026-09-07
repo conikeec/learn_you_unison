@@ -1,0 +1,98 @@
+[
+  {
+    "file": "README.md",
+    "source_directory": "~/tulving/olki-docs",
+    "accessed": "2026-09-06",
+    "review_scope": "read",
+    "sha256": "aa1dd11684fa0c0e6de00e6ca5140496d056a0f8c1a6dff3656c64db1e8b2d34",
+    "role": "Olki design requirement; not a claim of implemented behavior"
+  },
+  {
+    "file": "02-ir-spec.md",
+    "source_directory": "~/tulving/olki-docs",
+    "accessed": "2026-09-06",
+    "review_scope": "IR records and hashing sections read",
+    "sha256": "35093554187a23e11a47aedd6439f3aa1d90e3068a6397f869e97ed060d386a7",
+    "role": "Olki design requirement; not a claim of implemented behavior"
+  },
+  {
+    "file": "03-type-system.md",
+    "source_directory": "~/tulving/olki-docs",
+    "accessed": "2026-09-06",
+    "review_scope": "read",
+    "sha256": "d06d283983edfc57ae1f2e0f684564b3cf2200c8868efeb7571bb32d4b5da151",
+    "role": "Olki design requirement; not a claim of implemented behavior"
+  },
+  {
+    "file": "04-effects-and-grants.md",
+    "source_directory": "~/tulving/olki-docs",
+    "accessed": "2026-09-06",
+    "review_scope": "read",
+    "sha256": "2a5bb93de782efecb61b972a4918856593e62b9f8316365b4e34f313b07006a8",
+    "role": "Olki design requirement; not a claim of implemented behavior"
+  },
+  {
+    "file": "07-runtime.md",
+    "source_directory": "~/tulving/olki-docs",
+    "accessed": "2026-09-06",
+    "review_scope": "read",
+    "sha256": "237c1a803bd7bf8149b6cfba1f64274e6bfc5072d5e075b0f884f88c3ae706ff",
+    "role": "Olki design requirement; not a claim of implemented behavior"
+  },
+  {
+    "file": "08-reason-and-crystallization.md",
+    "source_directory": "~/tulving/olki-docs",
+    "accessed": "2026-09-06",
+    "review_scope": "read",
+    "sha256": "638a94b93a67ceb2d259a5e82df24be4fd793ad0a56b70819c5e6a02ffe03a53",
+    "role": "Olki design requirement; not a claim of implemented behavior"
+  },
+  {
+    "file": "09-trust-ledger.md",
+    "source_directory": "~/tulving/olki-docs",
+    "accessed": "2026-09-06",
+    "review_scope": "read",
+    "sha256": "bcb2cc6e9806a2c267eb19c4721545dba631a1a688c76834b9c3e894b87d0771",
+    "role": "Olki design requirement; not a claim of implemented behavior"
+  },
+  {
+    "file": "10-harness-integration.md",
+    "source_directory": "~/tulving/olki-docs",
+    "accessed": "2026-09-06",
+    "review_scope": "read",
+    "sha256": "aef9622b0faf5dc6fe6f2495a791ba8ea594f659153921c33bd32feebb5865d3",
+    "role": "Olki design requirement; not a claim of implemented behavior"
+  },
+  {
+    "file": "21-circuit-manifest.md",
+    "source_directory": "~/tulving/olki-docs",
+    "accessed": "2026-09-06",
+    "review_scope": "records, import checks, and generation rules read",
+    "sha256": "f17f42599000e17860e1f8cf51ff4429165a7b3d86ee900fd9befac47fb2b49d",
+    "role": "Olki design requirement; not a claim of implemented behavior"
+  },
+  {
+    "file": "22-implementation-order.md",
+    "source_directory": "~/tulving/olki-docs",
+    "accessed": "2026-09-06",
+    "review_scope": "principles, phase graph, and first phases read",
+    "sha256": "06fa53056ae853fad34b324d3d97a30e22e80cdb76e9efa0147e0e80520280be",
+    "role": "Olki design requirement; not a claim of implemented behavior"
+  },
+  {
+    "file": "23-circuit-composition.md",
+    "source_directory": "~/tulving/olki-docs",
+    "accessed": "2026-09-06",
+    "review_scope": "read",
+    "sha256": "e6f1fa635c246fb641a10a3a33aff4e55ab262b9b84a491640fc1f1d43e6c712",
+    "role": "Olki design requirement; not a claim of implemented behavior"
+  },
+  {
+    "file": "24-readiness.md",
+    "source_directory": "~/tulving/olki-docs",
+    "accessed": "2026-09-06",
+    "review_scope": "read",
+    "sha256": "8657fdfe585356552a2b5b277b913527ca94171dce8a1ab35030baf723d81006",
+    "role": "Olki design requirement; not a claim of implemented behavior"
+  }
+]

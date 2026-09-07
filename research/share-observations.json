@@ -1,0 +1,46 @@
+[
+  {
+    "project": "@unison/base",
+    "url": "https://share.unison-lang.org/@unison/base",
+    "accessed": "2026-09-06",
+    "latest_release_observed": "7.19.2",
+    "readme_retrieved": true,
+    "readme_release_pinned": false,
+    "readme_sha256": "003d78e268c67b977e1eff29d23b0f39db3cafed1e479538fa22f4e4f7734b42",
+    "acquisition": "UCM MCP share-project-info and share-project-readme",
+    "execution_tested": false
+  },
+  {
+    "project": "@unison/http",
+    "url": "https://share.unison-lang.org/@unison/http",
+    "accessed": "2026-09-06",
+    "latest_release_observed": "16.1.0",
+    "readme_retrieved": true,
+    "readme_release_pinned": false,
+    "readme_sha256": "0c831af160b07cc5150b683774f48f55fd05d4e959e0da06b0da6537f76bc1dd",
+    "acquisition": "UCM MCP share-project-info and share-project-readme",
+    "execution_tested": false
+  },
+  {
+    "project": "@unison/json",
+    "url": "https://share.unison-lang.org/@unison/json",
+    "accessed": "2026-09-06",
+    "latest_release_observed": "1.4.2",
+    "readme_retrieved": true,
+    "readme_release_pinned": false,
+    "readme_sha256": "4a71c2369a03ae9dc159bae1c705a1fe08d7337173f3ca9650278d147bb78d99",
+    "acquisition": "UCM MCP share-project-info and share-project-readme",
+    "execution_tested": false
+  },
+  {
+    "project": "@unison/cloud",
+    "url": "https://share.unison-lang.org/@unison/cloud",
+    "accessed": "2026-09-06",
+    "latest_release_observed": "27.3.1",
+    "readme_retrieved": true,
+    "readme_release_pinned": false,
+    "readme_sha256": "1c921158037108d6a524fd6ab07f160315e451abe22119ca957caad3c8f0f4cb",
+    "acquisition": "UCM MCP share-project-info and share-project-readme",
+    "execution_tested": false
+  }
+]

@@ -1,0 +1,388 @@
+[
+  {
+    "id": "home",
+    "title": "Unison language homepage",
+    "url": "https://www.unison-lang.org/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison"
+    ]
+  },
+  {
+    "id": "docs",
+    "title": "Official documentation index",
+    "url": "https://www.unison-lang.org/docs/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison-language",
+      "unison-research"
+    ]
+  },
+  {
+    "id": "overview",
+    "title": "Unison 1.0 overview",
+    "url": "https://www.unison-lang.org/unison-1-0/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison",
+      "unison-services"
+    ]
+  },
+  {
+    "id": "community",
+    "title": "Official community guide",
+    "url": "https://www.unison-lang.org/community/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison-research",
+      "unison-libraries"
+    ]
+  },
+  {
+    "id": "mcp",
+    "title": "UCM MCP setup",
+    "url": "https://www.unison-lang.org/docs/usage-topics/mcp-setup/",
+    "accessed": "2026-09-06",
+    "status": "read; cross-checked against installed schemas",
+    "used_by": [
+      "unison-ucm"
+    ]
+  },
+  {
+    "id": "commands",
+    "title": "UCM command reference",
+    "url": "https://www.unison-lang.org/docs/ucm-commands/",
+    "accessed": "2026-09-06",
+    "status": "read; selected commands executed",
+    "used_by": [
+      "unison-ucm",
+      "unison-libraries"
+    ]
+  },
+  {
+    "id": "tour",
+    "title": "A tour of Unison",
+    "url": "https://www.unison-lang.org/docs/tour/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison"
+    ]
+  },
+  {
+    "id": "delay",
+    "title": "Delayed computations",
+    "url": "https://www.unison-lang.org/docs/fundamentals/values-and-functions/delayed-computations/",
+    "accessed": "2026-09-06",
+    "status": "read; example executed",
+    "used_by": [
+      "unison-language"
+    ]
+  },
+  {
+    "id": "types",
+    "title": "Unique and structural types",
+    "url": "https://www.unison-lang.org/docs/fundamentals/data-types/unique-and-structural-types/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison-language"
+    ]
+  },
+  {
+    "id": "records",
+    "title": "Record types",
+    "url": "https://www.unison-lang.org/docs/fundamentals/data-types/record-types/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison-language"
+    ]
+  },
+  {
+    "id": "ability-model",
+    "title": "Abilities mental model",
+    "url": "https://www.unison-lang.org/docs/fundamentals/abilities/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison-abilities"
+    ]
+  },
+  {
+    "id": "ability-writing",
+    "title": "Writing abilities",
+    "url": "https://www.unison-lang.org/docs/fundamentals/abilities/writing-abilities/",
+    "accessed": "2026-09-06",
+    "status": "read; original handler example executed",
+    "used_by": [
+      "unison-abilities"
+    ]
+  },
+  {
+    "id": "ability-handler",
+    "title": "Language reference: handlers",
+    "url": "https://www.unison-lang.org/docs/language-reference/ability-handlers/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison-abilities"
+    ]
+  },
+  {
+    "id": "ability-faq",
+    "title": "Ability FAQs",
+    "url": "https://www.unison-lang.org/docs/fundamentals/abilities/faqs/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison-abilities"
+    ]
+  },
+  {
+    "id": "language-faq",
+    "title": "General language FAQs",
+    "url": "https://www.unison-lang.org/docs/usage-topics/general-faqs/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison-language"
+    ]
+  },
+  {
+    "id": "updates",
+    "title": "Updating code and dependencies",
+    "url": "https://www.unison-lang.org/docs/usage-topics/workflow-how-tos/update-code/",
+    "accessed": "2026-09-06",
+    "status": "read; compatible update example executed",
+    "used_by": [
+      "unison-ucm",
+      "unison-libraries"
+    ]
+  },
+  {
+    "id": "projects",
+    "title": "Project workflows",
+    "url": "https://www.unison-lang.org/docs/tooling/project-workflows/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison-ucm",
+      "unison-libraries"
+    ]
+  },
+  {
+    "id": "tests",
+    "title": "Testing guide",
+    "url": "https://www.unison-lang.org/docs/usage-topics/testing/",
+    "accessed": "2026-09-06",
+    "status": "read; pure tests executed",
+    "used_by": [
+      "unison-testing"
+    ]
+  },
+  {
+    "id": "transcripts",
+    "title": "Executable UCM transcripts",
+    "url": "https://www.unison-lang.org/docs/tooling/transcripts/",
+    "accessed": "2026-09-06",
+    "status": "read; three transcripts executed",
+    "used_by": [
+      "unison-testing"
+    ]
+  },
+  {
+    "id": "documentation",
+    "title": "Documenting Unison code",
+    "url": "https://www.unison-lang.org/docs/usage-topics/documentation/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison-libraries"
+    ]
+  },
+  {
+    "id": "running",
+    "title": "Running programs",
+    "url": "https://www.unison-lang.org/docs/usage-topics/running-programs/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison-services"
+    ]
+  },
+  {
+    "id": "release",
+    "title": "UCM release 1.4.0",
+    "url": "https://github.com/unisonweb/unison/releases/tag/release%2F1.4.0",
+    "accessed": "2026-09-06",
+    "status": "read; local version confirmed",
+    "used_by": [
+      "unison-ucm",
+      "unison-testing",
+      "unison-research"
+    ]
+  },
+  {
+    "id": "upstream-agent",
+    "title": "Upstream agent instructions",
+    "url": "https://github.com/unisoncomputing/unison-llm-support/blob/main/instructions.md",
+    "accessed": "2026-09-06",
+    "status": "read; workflow source, not adopted as policy",
+    "used_by": [
+      "unison",
+      "unison-ucm"
+    ]
+  },
+  {
+    "id": "upstream-language",
+    "title": "Upstream language guide",
+    "url": "https://raw.githubusercontent.com/unisoncomputing/unison-llm-support/main/unison-language-guide.md",
+    "accessed": "2026-09-06",
+    "status": "introductory sections inspected",
+    "used_by": [
+      "unison-language",
+      "unison-research"
+    ]
+  },
+  {
+    "id": "cloud-http",
+    "title": "Cloud HTTP learning module",
+    "url": "https://www.unison.cloud/learn/http-hello-world/",
+    "accessed": "2026-09-06",
+    "status": "read; no deployment executed",
+    "used_by": [
+      "unison-services"
+    ]
+  },
+  {
+    "id": "cloud-native",
+    "title": "Native service calls",
+    "url": "https://www.unison.cloud/learn/native-services/",
+    "accessed": "2026-09-06",
+    "status": "read; no deployment executed",
+    "used_by": [
+      "unison-services"
+    ]
+  },
+  {
+    "id": "roadmap",
+    "title": "Unison roadmap",
+    "url": "https://www.unison-lang.org/roadmap/",
+    "accessed": "2026-09-06",
+    "status": "read; intent only, may lag releases",
+    "used_by": [
+      "unison-research"
+    ]
+  },
+  {
+    "id": "share",
+    "title": "Unison Share",
+    "url": "https://share.unison-lang.org/",
+    "accessed": "2026-09-06",
+    "status": "web shell only; selected projects read using MCP",
+    "used_by": [
+      "unison-libraries"
+    ]
+  },
+  {
+    "id": "base",
+    "title": "Base library",
+    "url": "https://share.unison-lang.org/@unison/base",
+    "accessed": "2026-09-06",
+    "status": "README and latestRelease retrieved through UCM MCP; not executed",
+    "used_by": [
+      "unison-libraries",
+      "unison-services"
+    ]
+  },
+  {
+    "id": "http",
+    "title": "HTTP library",
+    "url": "https://share.unison-lang.org/@unison/http",
+    "accessed": "2026-09-06",
+    "status": "README and latestRelease retrieved through UCM MCP; not executed",
+    "used_by": [
+      "unison-libraries",
+      "unison-services"
+    ]
+  },
+  {
+    "id": "json",
+    "title": "JSON library",
+    "url": "https://share.unison-lang.org/@unison/json",
+    "accessed": "2026-09-06",
+    "status": "README and latestRelease retrieved through UCM MCP; not executed",
+    "used_by": [
+      "unison-libraries",
+      "unison-services"
+    ]
+  },
+  {
+    "id": "cloud",
+    "title": "Cloud client library",
+    "url": "https://share.unison-lang.org/@unison/cloud",
+    "accessed": "2026-09-06",
+    "status": "README and latestRelease retrieved through UCM MCP; not executed",
+    "used_by": [
+      "unison-libraries",
+      "unison-services"
+    ]
+  },
+  {
+    "id": "devtools",
+    "title": "DevTools.fm episode 45, Runar Bjarnason",
+    "url": "https://www.devtools.fm/episode/45",
+    "accessed": "2026-09-06",
+    "status": "publisher transcript read from public HTML payload; audio not checked",
+    "used_by": [
+      "unison-research",
+      "unison-abilities",
+      "unison-libraries"
+    ]
+  },
+  {
+    "id": "strangeloop",
+    "title": "Strange Loop 2019 conference talk",
+    "url": "https://thestrangeloop.com/2019/unison-a-new-distributed-programming-language.html",
+    "accessed": "2026-09-06",
+    "status": "conference description located; recording fetch failed; no transcript",
+    "used_by": [
+      "unison-research"
+    ]
+  },
+  {
+    "id": "talk-writeup",
+    "title": "Author companion post for Strange Loop",
+    "url": "https://www.unison-lang.org/blog/heres-whats-been-happening-with-unison/",
+    "accessed": "2026-09-06",
+    "status": "read; historical 2019-10-16",
+    "used_by": [
+      "unison-research"
+    ]
+  },
+  {
+    "id": "forall",
+    "title": "Unison Forall 2024",
+    "url": "https://www.unison-lang.org/unison-forall-2024/",
+    "accessed": "2026-09-06",
+    "status": "event page read; individual transcripts not retrieved",
+    "used_by": [
+      "unison-research"
+    ]
+  },
+  {
+    "id": "wrapped",
+    "title": "Unison 2024 recap",
+    "url": "https://www.unison-lang.org/wrapped2024/",
+    "accessed": "2026-09-06",
+    "status": "read; recording discovery lead",
+    "used_by": [
+      "unison-research"
+    ]
+  }
+]
