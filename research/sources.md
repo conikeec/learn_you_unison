@@ -26,7 +26,7 @@ The local baseline is UCM release/1.4.0, built 2026-08-19.
 | updates | [Updating code and dependencies](https://www.unison-lang.org/docs/usage-topics/workflow-how-tos/update-code/) | read; compatible update example executed | unison-ucm, unison-libraries |
 | projects | [Project workflows](https://www.unison-lang.org/docs/tooling/project-workflows/) | read | unison-ucm, unison-libraries |
 | tests | [Testing guide](https://www.unison-lang.org/docs/usage-topics/testing/) | read; pure tests executed | unison-testing |
-| transcripts | [Executable UCM transcripts](https://www.unison-lang.org/docs/tooling/transcripts/) | read; three transcripts executed | unison-testing |
+| transcripts | [Executable UCM transcripts](https://www.unison-lang.org/docs/tooling/transcripts/) | read; four transcripts executed | unison-testing |
 | documentation | [Documenting Unison code](https://www.unison-lang.org/docs/usage-topics/documentation/) | read | unison-libraries |
 | running | [Running programs](https://www.unison-lang.org/docs/usage-topics/running-programs/) | read | unison-services |
 | release | [UCM release 1.4.0](https://github.com/unisonweb/unison/releases/tag/release%2F1.4.0) | read; local version confirmed | unison-ucm, unison-testing, unison-research |
@@ -45,11 +45,17 @@ The local baseline is UCM release/1.4.0, built 2026-08-19.
 | talk-writeup | [Author companion post for Strange Loop](https://www.unison-lang.org/blog/heres-whats-been-happening-with-unison/) | read; historical 2019-10-16 | unison-research |
 | forall | [Unison Forall 2024](https://www.unison-lang.org/unison-forall-2024/) | event page read; individual transcripts not retrieved | unison-research |
 | wrapped | [Unison 2024 recap](https://www.unison-lang.org/wrapped2024/) | read; recording discovery lead | unison-research |
+| big-idea | [The big idea: content-addressed code](https://www.unison-lang.org/docs/the-big-idea/) | read; original identity example executed | unison |
+| git-objects | [Git internals: Git objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects) | read; comparison of object granularity | unison |
+| organization | [Projects and codebase organization](https://www.unison-lang.org/docs/tooling/projects-codebase-organization/) | read | unison, unison-ucm |
+| recovery | [Resetting codebase state](https://www.unison-lang.org/docs/usage-topics/resetting-codebase-state/) | read; recovery commands not executed | unison-ucm |
+| share-hosting | [Hosting code on Unison Share](https://www.unison-lang.org/docs/tooling/unison-share/) | read; publishing workflow not executed | unison, unison-libraries |
 
 ## Local evidence strengthens the documentation
 
 - [MCP contract](ucm-1.4.0-mcp.json): 29 tools returned by a disposable UCM process.
 - [Share observations](share-observations.json): retrieved release metadata and README fingerprints for four projects.
+- [Orientation example](../examples/content-addressing.md): equal definition references, rename, alias handling, and branch isolation executed locally.
 - [Executable examples](../examples/fundamentals.md): original code checked against the installed runtime.
 - [Talk notes](../skills/unison-research/references/talks.md): derived lessons and exact transcript access status.
 

@@ -34,7 +34,7 @@ def main():
         if not discovery.is_symlink() or discovery.resolve() != path.parent:
             errors.append(f"{name}: missing or incorrect repository discovery link")
     files = [ROOT / "README.md", ROOT / "AGENTS.md"]
-    for folder in ("skills", "research", "evals", "examples"):
+    for folder in ("skills", "docs", "research", "evals", "examples"):
         files.extend((ROOT / folder).rglob("*.md"))
     for path in files:
         if path.name.endswith(".output.md"):

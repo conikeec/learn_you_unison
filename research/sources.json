@@ -190,7 +190,7 @@
     "title": "Executable UCM transcripts",
     "url": "https://www.unison-lang.org/docs/tooling/transcripts/",
     "accessed": "2026-09-06",
-    "status": "read; three transcripts executed",
+    "status": "read; four transcripts executed",
     "used_by": [
       "unison-testing"
     ]
@@ -383,6 +383,58 @@
     "status": "read; recording discovery lead",
     "used_by": [
       "unison-research"
+    ]
+  },
+  {
+    "id": "big-idea",
+    "title": "The big idea: content-addressed code",
+    "url": "https://www.unison-lang.org/docs/the-big-idea/",
+    "accessed": "2026-09-06",
+    "status": "read; original identity example executed",
+    "used_by": [
+      "unison"
+    ]
+  },
+  {
+    "id": "git-objects",
+    "title": "Git internals: Git objects",
+    "url": "https://git-scm.com/book/en/v2/Git-Internals-Git-Objects",
+    "accessed": "2026-09-06",
+    "status": "read; comparison of object granularity",
+    "used_by": [
+      "unison"
+    ]
+  },
+  {
+    "id": "organization",
+    "title": "Projects and codebase organization",
+    "url": "https://www.unison-lang.org/docs/tooling/projects-codebase-organization/",
+    "accessed": "2026-09-06",
+    "status": "read",
+    "used_by": [
+      "unison",
+      "unison-ucm"
+    ]
+  },
+  {
+    "id": "recovery",
+    "title": "Resetting codebase state",
+    "url": "https://www.unison-lang.org/docs/usage-topics/resetting-codebase-state/",
+    "accessed": "2026-09-06",
+    "status": "read; recovery commands not executed",
+    "used_by": [
+      "unison-ucm"
+    ]
+  },
+  {
+    "id": "share-hosting",
+    "title": "Hosting code on Unison Share",
+    "url": "https://www.unison-lang.org/docs/tooling/unison-share/",
+    "accessed": "2026-09-06",
+    "status": "read; publishing workflow not executed",
+    "used_by": [
+      "unison",
+      "unison-libraries"
     ]
   }
 ]

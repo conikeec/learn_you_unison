@@ -6,6 +6,13 @@ Start by asking your agent to read [the Unison entry skill](skills/unison/SKILL.
 For example: “Read `skills/unison/SKILL.md`, inspect my UCM project, and implement a tested pure function.”
 The agent loads the relevant specialist, checks real signatures, and verifies the result through UCM.
 
+## New to Unison? Start with the surprise
+
+1. **[Your function can survive a name change](docs/01-code-that-knows-its-own-name.md)** — a game, a rename, and the hash that stays put.
+2. **[Your codebase is a database you can program](docs/02-your-codebase-is-not-a-folder.md)** — where code lives and how editing, branches, history, and sharing work.
+
+Both guides use diagrams and the same executable example. No prior Unison knowledge required.
+
 ## Load the skills where your harness can find them
 
 The canonical skills live under `skills/`. Each directory contains standard `SKILL.md` frontmatter and task instructions.
@@ -13,7 +20,7 @@ The repository's `.agents/skills/` links expose these same files to harnesses th
 `AGENTS.md` provides an explicit entrypoint for repository work.
 
 For a different harness, add this instruction to its project rules: “For Unison tasks, read `skills/unison/SKILL.md`.”
-Keep the bundle's `skills/`, `examples/`, `scripts/`, and `research/` paths together; references link across these directories.
+Keep the bundle's `skills/`, `docs/`, `examples/`, `scripts/`, and `research/` paths together; references link across these directories.
 Automatic discovery depends on the harness; this repository does not modify user-wide configuration.
 
 ## Choose the skill that matches the task
